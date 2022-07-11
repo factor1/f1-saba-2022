@@ -1,0 +1,27 @@
+/*----------------------------------------------------------------------------
+  Learndash Overrides
+----------------------------------------------------------------------------*/
+.ld-progress-percentage {
+  // color: $sky !important;
+}
+
+.learndash-wrapper .ld-progress .ld-progress-bar .ld-progress-bar-percentage {
+  // background-color: $sky !important;
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-complete,
+.learndash-wrapper .ld-status-complete {
+  // background-color: $sky;
+}
+
+.learndash-wrapper .ld-button {
+  // border-color: $sky !important;
+  // background-color: $sky !important;
+  // color: $white;
+}
+
+.learndash_mark_complete_button {
+  // border-color: $teal !important;
+  // background-color: $teal !important;
+  // color: $white;
+}

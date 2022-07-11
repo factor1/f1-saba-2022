@@ -1,0 +1,108 @@
+/*----------------------------------------------------------------------------
+  Woocommerce Overrides
+----------------------------------------------------------------------------*/
+nav.woocommerce-MyAccount-navigation {
+  margin-bottom: rem(30);
+  padding: rem(20);
+  border-radius: rem(10);
+  // background-color: $offWhite;
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex: 0 1 100%;
+
+    &.is-active a {
+      // color: $teal;
+    }
+  }
+}
+
+.woocommerce-message {
+  // border-color: $blue;
+
+  &:before {
+    // color: $sky;
+  }
+}
+
+.woocommerce-info::before {
+  // color: $sky;
+}
+
+.woocommerce .price {
+  // color: $sky !important;
+}
+
+.woocommerce-Button,
+.woocommerce .button {
+  // border: rem(1) solid $teal !important;
+  border-radius: rem(100) !important;
+  box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.53) !important;
+  // background-color: $teal !important;
+  // font: 900 rem(18)/1 $sans;
+  // letter-spacing: rem(1.7);
+  // color: $white !important;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-appearance: none;
+  transition: all .4s ease;
+
+  &:focus,
+  &:hover {
+    color: $white !important;
+    box-shadow: 0 rem(0) rem(6) rgba(0, 0, 0, 0.33) !important;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    font-size: rem(16);
+  }
+}
+
+.woocommerce .quantity + .button {
+  margin-left: rem(10);
+}
+
+.woocommerce-cart-form {
+  a.remove {
+    // color: $sky !important;
+
+    &:focus,
+    &:hover {
+      // background-color: $sky !important;
+      // color: $white !important;
+    }
+  }
+
+  .coupon {
+    display: flex;
+    width: 70%;
+
+    input[type="text"] {
+      width: auto !important;
+      margin-right: rem(15);
+      border: none !important;
+      // border-bottom: rem(1) solid $navy !important;
+    }
+  }
+}
+
+.woocommerce form.checkout #order_review_heading {
+  margin-top: rem(30);
+}
+
+.woocommerce-product-gallery__image {
+  pointer-events: none;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger,
+img.zoomImg {
+  display: none !important;
+}
+
+.woocommerce-result-count {
+  display: none;
+}
