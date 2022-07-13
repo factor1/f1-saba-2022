@@ -4,7 +4,6 @@
 .site-footer {
   &__top {
     @include iPhoneX;
-    // background-color: $red;
 
     .container {
       padding: rem(30) 0;
@@ -13,7 +12,7 @@
     .col-12 {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
   }
@@ -24,11 +23,33 @@
 
   &__main {
     @include iPhoneX;
-    // background-color: $black;
 
     .container {
-      padding: rem(85) 0;
+      padding: rem(30) 0 rem(60);
     }
+  }
+
+  &__bottom {
+    @include iPhoneX;
+    background-color: $primary;
+
+    .container {
+      padding: rem(29) 0;
+    }
+
+    .col-12 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      color: $off-gray;
+      font: 400 rem(16)/1.19 $mont;
+      margin: 0;
+    }
+
   }
 }
 

@@ -33,26 +33,30 @@ $btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
     <div class="row row--justify-content-<?php echo $colAlign; ?>">
       <div class="col-<?php echo $colSpan; ?>" data-aos="fade-up">
 
-        <?php echo $content;
+        <div class="hero__container">
 
-        // Optional buttons
-        if( have_rows('hero_buttons') ) : ?>
+          <?php echo $content;
 
-          <div class="buttons text-<?php echo $btnAlign; ?>">
+          // Optional buttons
+          if( have_rows('hero_buttons') ) : ?>
 
-            <?php while( have_rows('hero_buttons') ) : the_row();
-              $btnClass = get_sub_field('button_class');
-              $btn = get_sub_field('button'); ?>
+            <div class="buttons text-<?php echo $btnAlign; ?>">
 
-              <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-                <?php echo $btn['title']; ?>
-              </a>
+              <?php while( have_rows('hero_buttons') ) : the_row();
+                $btnClass = get_sub_field('button_class');
+                $btn = get_sub_field('button'); ?>
 
-            <?php endwhile; ?>
+                <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
+                  <?php echo $btn['title']; ?>
+                </a>
 
-          </div>
+              <?php endwhile; ?>
 
-        <?php endif; ?>
+            </div>
+
+          <?php endif; ?>
+          
+        </div>
 
       </div>
     </div>

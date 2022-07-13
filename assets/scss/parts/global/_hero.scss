@@ -18,6 +18,11 @@
     height: 100%;
   }
 
+  &__container {
+    background-color: $white;
+    padding: rem(40);
+  }
+
   video {
     position: absolute;
     top: 50%;
@@ -30,12 +35,16 @@
   }
 
   .container {
-    padding: rem(180) 0;
+    padding: rem(300) 0 0;
     z-index: 1;
   }
 
   h1 {
     margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
   }
 
   .button {

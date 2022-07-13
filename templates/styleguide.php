@@ -14,6 +14,7 @@ get_header(); ?>
 
   .styleguide .bg {
     padding: 20px;
+    background-color: #1A1A1A;
   }
 </style>
 
@@ -21,9 +22,6 @@ get_header(); ?>
   <div class="container">
     <div class="row row--justify-content-center">
       <div class="col-10">
-        <div class="bg">
-
-        </div>
 
         <h1>Heading 1</h1>
 
@@ -48,9 +46,16 @@ get_header(); ?>
 
           <button class="button button--secondary-ghost">Button Secondary (Ghost)</button>
 
-          <button class="button button--white">Button White</button>
+          <button class="button button--gray">Button Gray</button>
+        </div>
 
-          <button class="button button--white-ghost">Button White (Ghost)</button>
+        <div class="bg">
+          <div class="buttons">
+
+            <button class="button button--white">Button White</button>
+
+            <button class="button button--white-ghost">Button White (Ghost)</button>
+          </div>
         </div>
       </div>
     </div>
