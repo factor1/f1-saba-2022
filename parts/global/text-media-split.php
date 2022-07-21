@@ -1,11 +1,11 @@
 <?php
 /*
- * Text/Image Split (Global)
+ * Text/Media Split (Global)
  *
  * Template part used on various templates/views
  */
 
-// Text/Image Split Custom Fields
+// Text/Media Split Custom Fields
 $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left or right
 $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width section
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
@@ -21,26 +21,25 @@ $video = get_sub_field('text_image_split_video');
 
 // Conditional classes
 $sectionClass = $marginOption ? ' with-margin' : '';
-$rowClass = $layoutOption == 'left' ? ' row--reverse' : '';
+$rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
-<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
+<section class="text-media-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
   <div class="container">
     <div class="row row--justify-content-end<?php echo $rowClass . $rowClass2; ?>">
 
       <?php $row_id = wp_unique_id(); ?>
       <?php if($video_toggle): ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"   data-micromodal-trigger="modal-<?php echo $row_id; ?>">
-      <?php else: ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat">
-      <?php endif; ?>
-        <?php if($video_toggle): ?>
+        <div class="col-5 stretch text-media-split__image" data-micromodal-trigger="modal-<?php echo $row_id; ?>">
           <i class="fa fa-solid fa-play float-icon"></i>
-        <?php endif; ?>
+      <?php else: ?>
+        <div class="col-5 stretch text-media-split__image">
+      <?php endif; ?>
+        <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
       </div>
 
       <?php // Text ?>
-      <div class="col-6 text-image-split__text sm-text-center">
+      <div class="col-7 text-media-split__text sm-text-center">
         <div>
 
           <?php echo $content;

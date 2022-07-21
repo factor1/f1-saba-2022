@@ -1,6 +1,7 @@
 import Bowser from "bowser";
 import $ from "jquery";
 import "slick-carousel";
+import MicroModal from "micromodal";
 
 $(document).ready(function() {
   // Inside of this function, $() will work as an alias for jQuery()
@@ -114,4 +115,22 @@ $(document).ready(function() {
       ]
     });
   }
+
+  // Micromodal init
+  MicroModal.init({
+    onClose: () => {
+      $('video').trigger('pause');
+      stopVideo;
+    }
+  });
+
+  var stopVideo = function () {
+    var videos = $('iframe');
+    videos.each(function (index) {
+      var iframe = videos[index];
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    });
+  };
+  
 });

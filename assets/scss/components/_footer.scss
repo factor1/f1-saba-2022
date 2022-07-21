@@ -27,6 +27,31 @@
     .container {
       padding: rem(30) 0 rem(60);
     }
+
+    .footer-form {
+      .gfield {
+        margin: 0 !important;
+      }
+      .gform_fields {
+        display: flex !important;
+        background-color: #09132110;
+      }
+
+      input[type=email] {
+        border: none !important;
+        padding: rem(15) 0 rem(15) rem(15) !important; 
+        font-size: rem(18);
+      }
+
+      .gform-button {
+        background: transparent !important;
+        border: none !important;
+        display: block;
+      }
+            
+
+    }
+
   }
 
   &__bottom {

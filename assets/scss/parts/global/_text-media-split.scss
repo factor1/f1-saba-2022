@@ -1,32 +1,63 @@
 /*
- * Text/Image Split (Global)
+ * Text/Media Split (Global)
  *
  * Template part used on various templates/views
  */
 
-.text-image-split {
+.text-media-split {
   &.with-margin {
     margin-top: rem(30);
     margin-bottom: rem(30);
   }
 
-  .row--reverse .text-image-split__text {
-    padding-right: rem(12.8);
-    padding-left: rem(30);
+  .row--reverse .text-media-split__text {
+    display: flex;
+    justify-content: flex-end;
+
+    >div {
+      padding: rem(50) rem(40) rem(20) 0;
+    }
+  }
+
+  .row--reverse .text-media-split__image {
+    div {
+      left: auto;
+      right: 0;
+    }
+
+  }
+
+  .col-5,
+  .col-7 {
+    max-width: unset;
   }
 
   &__text {
-    padding-top: rem(50);
-    padding-bottom: rem(60);
-    padding-right: rem(30);
+    padding-top: rem(140);
+    padding-bottom: rem(90);
+    display: flex;
+    justify-content: flex-start;
 
     >div {
       @include iPhoneX;
+      max-width: rem(600);
+      padding: rem(50) 0 rem(20) rem(40);
+      background-color: $white;
+      z-index: 5;
     }
+
   }
 
   &__image {
     position: relative;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150%;
+      height: 100%;
+    }
 
     .float-icon {
       position: absolute;
@@ -36,6 +67,7 @@
       background: #ffffff8f;
       padding: rem(21) rem(20) rem(18) rem(26);
       border-radius: rem(50);
+      z-index: 9;
     }
   }
 
@@ -46,7 +78,7 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .text-image-split {
+  .text-media-split {
     &__text {
       max-width: 100%;
       padding: rem(30) rem(12.8) rem(40) !important;

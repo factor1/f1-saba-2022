@@ -1,0 +1,13 @@
+/*
+ * Text Split (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.text-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+}

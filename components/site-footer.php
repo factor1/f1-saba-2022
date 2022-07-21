@@ -31,6 +31,7 @@ $content = get_field('footer_content', 'option');
       <div class="row">
 
         <div class="col-4 sm-col-12">
+          <h5>FOLLOW US ON SOCIAL</h5>
           <?php // Social menu
             prelude_social_menu(); ?>
         </div>
