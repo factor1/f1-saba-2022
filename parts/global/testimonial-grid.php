@@ -6,6 +6,7 @@
  */
 
 $intro = get_sub_field('testimonial_intro');
+$btn = get_sub_field('testimonial_button');
 $args = array(
 	'post_type' => array( 'simple_testimonials' ),
 );
@@ -49,6 +50,13 @@ if( $query->have_posts() ) : ?>
 
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <?php if($btn): ?>
+            <a href="<?php echo $btn['url']; ?>" class="button button--primary"><?php echo $btn['title']; ?></a>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
   </section>

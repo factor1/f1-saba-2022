@@ -132,5 +132,19 @@ $(document).ready(function() {
       iframe.src = iframeSrc;
     });
   };
+
+  // Home testimonials slider
+  $(".card_slider__slider").slick({
+    arrows: true,
+    autoplay: false,
+    dots: true,
+    initialSlide: 0,
+    slidesToShow: 1.5,
+    autoplaySpeed: 4000,
+    infinite: false,
+    centerMode: true,
+    variableWidth: false,
+    adaptiveHeight: false
+  });
   
 });
