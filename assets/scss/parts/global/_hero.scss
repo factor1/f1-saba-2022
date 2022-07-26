@@ -9,6 +9,12 @@
   @include iPhoneX;
   overflow: hidden;
 
+  &.has-top-content {
+    .container {
+      padding: rem(80) 0 0;
+    }
+  }
+
   // Hero video
   &__video {
     position: absolute;
@@ -16,6 +22,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &__top-content {
+    .container {
+      padding: rem(80) 0;
+    }
   }
 
   &__container {

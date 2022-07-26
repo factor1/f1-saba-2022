@@ -18,6 +18,8 @@ $btnClass = get_sub_field('text_image_split_button_class');
 $btn = get_sub_field('text_image_split_button');
 $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
+$video_external = get_sub_field('text_image_split_video_external');
+$video_source = get_sub_field('text_image_split_video_source_select');
 
 // Conditional classes
 $sectionClass = $marginOption ? ' with-margin' : '';
@@ -73,10 +75,19 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
           <div class="container">
             <div class="row">
               <div class="col-12">
+
+              <?php if($video_source=='internal'): ?>
                 <video controls>
                   <source src="<?php echo $video['url']; ?>" type="<?php echo $video['mime_type']; ?>">
                   Your browser does not support the video tag.
                 </video>
+
+              <?php else: ?>
+                
+                <?php echo $video_external; ?>
+
+              <?php endif; ?>
+
               </div>
             </div>
           </div>

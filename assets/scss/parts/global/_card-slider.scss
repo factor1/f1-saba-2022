@@ -43,4 +43,29 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
 
+  .card_slider {
+    .slick-next,
+    .slick-prev {
+      display: none !important;
+    }
+  }
+  .card_slider__slider {
+    .single-card {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 rem(15);
+
+      .card-image {
+        flex-basis: auto;
+        height: 30vh;
+      }
+    }
+  }
+
+  .text-media-split .row--reverse .text-media-split__text>div,
+  .text-media-split__text>div {
+    padding: rem(10) rem(30);
+  }
+  
+
 }

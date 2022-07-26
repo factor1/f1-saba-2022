@@ -9,6 +9,10 @@
 
   .container {
     padding: rem(50) 0;
+    iframe {
+      width: 100%;
+      height: rem(600);
+    }
   }
 
   &__featured-image {

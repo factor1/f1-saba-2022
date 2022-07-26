@@ -17,7 +17,7 @@ if( $query->have_posts() ) : ?>
   <section class="testimonial-grid">
     <div class="container">
       <div class="row">
-        <div class="col-10 col-centered">
+        <div class="col-10 col-centered testimonial-grid__intro">
           <?php echo $intro; ?>
         </div>
       </div>

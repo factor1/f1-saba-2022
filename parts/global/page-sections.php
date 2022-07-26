@@ -43,6 +43,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/testimonial-grid');
 
+  elseif( get_row_layout() == 'testimonial_grid_custom' ) :
+
+    get_template_part('parts/global/testimonial-grid-custom');
+
   elseif( get_row_layout() == 'card_slider' ) :
 
     get_template_part('parts/global/card-slider');

@@ -14,9 +14,12 @@ $colAlign = get_field('hero_column_alignment');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
 $content = get_field('hero_content');
-$btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
+$btnAlign = get_field('hero_button_alignment'); // left, center, or right
+$top_content = get_field('hero_top_content');
+$has_top_content = $top_content != '' ? ' has-top-content' : '';
+?>
 
-<section class="hero" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
+<section class="hero <?php echo $has_top_content; ?>" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
 
   <?php // Optional bg video
   if( $videoToggle && $video ) : ?>
@@ -27,6 +30,18 @@ $btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
       </video>
     </div>
 
+  <?php endif; ?>
+
+  <?php if($top_content): ?>
+    <div class="herp__top-content">
+      <div class="container">
+        <div class="row row--justify-content-<?php echo $colAlign; ?>">
+          <div class="col-<?php echo $colSpan; ?>" data-aos="fade-up">
+            <?php echo $top_content; ?>
+          </div>
+        </div>
+      </div>
+    </div>
   <?php endif; ?>
 
   <div class="container">

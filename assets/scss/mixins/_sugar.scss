@@ -22,7 +22,7 @@
 @mixin buttons($border, $bg, $color, $hoverBorder, $hoverBg, $hoverColor) {
   display: inline-block;
   margin: rem(5);
-  padding: rem(15);
+  padding: rem(20) rem(50);
   border: rem(2) solid $border;
   border-radius: rem(5);
   background-color: $bg;

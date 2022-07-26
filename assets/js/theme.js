@@ -144,7 +144,15 @@ $(document).ready(function() {
     infinite: false,
     centerMode: true,
     variableWidth: false,
-    adaptiveHeight: false
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
   
 });

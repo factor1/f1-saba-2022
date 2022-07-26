@@ -12,6 +12,10 @@
     padding: rem(100) 0;
   }
 
+  &__intro {
+    margin-bottom: rem(40);
+  }
+
   &__single {
     .single-top {
       display: flex;
@@ -24,8 +28,13 @@
         margin-right: rem(10);
       }
 
-      .name * {
-        margin-bottom: 0;
+      .name {
+        h5 {
+          font-weight: bold;
+        }
+        * {
+            margin-bottom: 0;
+          }
       }
     }
   }

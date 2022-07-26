@@ -10,7 +10,7 @@ $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left 
 $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width section
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
 $bgColor = get_sub_field('text_image_split_background_color');
-$img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'text_image_split');
+$img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'large');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btnAlign = get_sub_field('text_image_split_button_alignment');
@@ -18,10 +18,13 @@ $btnClass = get_sub_field('text_image_split_button_class');
 $btn = get_sub_field('text_image_split_button');
 $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
+$steps_toggle = get_sub_field('text_image_split_steps_toggle');
+$steps_content = get_sub_field('text_image_split_after_steps_content');
+
 
 // Conditional classes
 $sectionClass = $marginOption ? ' with-margin' : '';
-$rowClass = $layoutOption == 'left' ? ' row--reverse' : '';
+$rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
 <section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
@@ -30,9 +33,9 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
       <?php $row_id = wp_unique_id(); ?>
       <?php if($video_toggle): ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"   data-micromodal-trigger="modal-<?php echo $row_id; ?>">
+        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat"   data-micromodal-trigger="modal-<?php echo $row_id; ?>">
       <?php else: ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat">
+        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat">
       <?php endif; ?>
         <?php if($video_toggle): ?>
           <i class="fa fa-solid fa-play float-icon"></i>
@@ -40,10 +43,32 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
       </div>
 
       <?php // Text ?>
-      <div class="col-6 text-image-split__text sm-text-center">
+      <div class="col-6 text-image-split__text">
         <div>
 
           <?php echo $content;
+
+          if($steps_toggle && have_rows('text_image_split_steps_section')): ?>
+
+            <div class="text-image-split__steps">
+            <?php while( have_rows('text_image_split_steps_section') ): the_row(); 
+              $title = get_sub_field('title');
+              $sub_title = get_sub_field('sub_title');
+              ?>
+              <div class="single-steps">
+                <div class="steps-numbers">
+                  <span><?php echo get_row_index(); ?></span>
+                </div>
+                <div class="steps-content">
+                  <h3><?php echo $title; ?></h3>
+                  <h5><?php echo $sub_title; ?></h5>
+                </div>
+              </div>
+            <?php endwhile; ?>
+            </div>
+            
+            <?php echo $steps_content; ?>
+          <?php endif; 
 
           // Optional button
           if( $btnToggle && $btn ) : ?>
