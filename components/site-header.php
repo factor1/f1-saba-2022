@@ -9,7 +9,7 @@ $header_toggle = get_field('menu_toggle');
 
 if(!$header_toggle): ?>
 
-  <header class="site-header">
+  <header class="site-header" id="site-menu">
     <div class="container">
       <div class="row">
         <div class="col-12">

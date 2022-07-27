@@ -251,7 +251,7 @@
         position: relative;
         font: 400 17px/1.41 "Raleway", sans-serif;
         color: #020000;
-        background-color: #314556;
+        background-color: #1A1A1A;
       }
       .login .message,
       .login #login_error {
@@ -266,7 +266,7 @@
       }
       #login form p,
       #login form label {
-        color: #314556 !important;
+        color: #1A1A1A !important;
       }
       .login p a:hover,
       .login .privacy-policy-link:hover {
@@ -333,7 +333,7 @@
       }
   	</style>';
   }
-  // add_action('login_head', 'custom_loginlogo');
+  add_action('login_head', 'custom_loginlogo');
 
   // Update login logo link
   function custom_loginlogo_url($url) {

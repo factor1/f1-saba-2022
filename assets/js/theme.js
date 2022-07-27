@@ -119,13 +119,13 @@ $(document).ready(function() {
   // Micromodal init
   MicroModal.init({
     onClose: () => {
-      $('video').trigger('pause');
+      $("video").trigger("pause");
       stopVideo;
     }
   });
 
   var stopVideo = function () {
-    var videos = $('iframe');
+    var videos = $("iframe");
     videos.each(function (index) {
       var iframe = videos[index];
       var iframeSrc = iframe.src;
@@ -153,6 +153,26 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+
+  let previousScroll = 0;
+  const $header = $("#site-menu");
+  const headerOrgOffset = $header.offset().top;
+
+  $(window).on("scroll", function() {
+    const currentScroll = $(this).scrollTop();
+    if(currentScroll > headerOrgOffset) {
+      if (currentScroll > previousScroll) {
+        $header.fadeOut();
+      } else {
+        $header
+          .fadeIn()
+          .addClass("fixed");
+      }
+    } else {
+      $header.removeClass("fixed");   
+    }
+    previousScroll = currentScroll;
   });
   
 });
