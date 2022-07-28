@@ -106,7 +106,10 @@
   .text-image-split {
     &__text {
       max-width: 100%;
-      padding: rem(30) rem(12.8) rem(40) !important;
+      padding: rem(10) rem(30) !important;
+      > div {
+        padding: 0;
+      }
     }
 
     &__image {

@@ -25,3 +25,11 @@
   }
 
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .centered-text-block .container iframe {
+    height: rem(200);
+  }
+}
+

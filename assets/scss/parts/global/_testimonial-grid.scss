@@ -39,3 +39,10 @@
     }
   }
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .testimonial-grid .sm-col-12 {
+    padding: rem(10) rem(30);
+  }
+}

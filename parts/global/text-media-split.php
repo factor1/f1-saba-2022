@@ -41,7 +41,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
       </div>
 
       <?php // Text ?>
-      <div class="col-7 text-media-split__text sm-text-center">
+      <div class="col-7 text-media-split__text">
         <div>
 
           <?php echo $content;
@@ -49,7 +49,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
           // Optional button
           if( $btnToggle && $btn ) : ?>
 
-            <div class="text-<?php echo $btnAlign; ?> sm-text-center">
+            <div class="text-<?php echo $btnAlign; ?>">
               <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
                 <?php echo $btn['title']; ?>
               </a>

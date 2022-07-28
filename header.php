@@ -6,12 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta property="og:title" content="<?php the_title(); ?>" />
   <meta property="og:site_name" content="<?php bloginfo('name') ?>">
-
-  <?php
-  /* Theme color for browsers that support it
-  <meta name="theme-color" content="#000">
-  */
-  ?>
+  <meta name="theme-color" content="#1A1A1A">
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
