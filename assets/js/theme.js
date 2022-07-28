@@ -162,11 +162,11 @@ $(document).ready(function() {
   $(window).on("scroll", function() {
     const currentScroll = $(this).scrollTop();
     if(currentScroll > headerOrgOffset) {
-      if (currentScroll > previousScroll) {
-        $header.fadeOut();
+      if (currentScroll >= previousScroll) {
+        $header.slideUp("fast");
       } else {
         $header
-          .fadeIn()
+          .slideDown("fast")
           .addClass("fixed");
       }
     } else {

@@ -30,10 +30,16 @@ body {
 }
 
 .site-header {
-  position: relative;
   @include iPhoneX;
+  width: 100%;
+  position: absolute;
   background-color: $primary;
   z-index: 9999;
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+  }
 
   .container {
     padding: rem(20) 0;
