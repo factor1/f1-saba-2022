@@ -35,6 +35,7 @@
       .gform_fields {
         display: flex !important;
         background-color: #09132110;
+        justify-content: space-between;
       }
 
       input[type=email] {
@@ -47,6 +48,12 @@
         background: transparent !important;
         border: none !important;
         display: block;
+      }
+
+
+      #field_submit {
+        padding: rem(15) !important;
+        max-width: rem(60) !important;
       }
             
 

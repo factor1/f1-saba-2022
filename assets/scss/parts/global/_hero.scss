@@ -8,10 +8,8 @@
   position: relative;
   @include iPhoneX;
   overflow: hidden;
-  margin-top: rem(112);
 
   &.has-top-content {
-    margin-top: rem(0);
     .container {
       padding: rem(80) 0 0;
     }
@@ -85,7 +83,6 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .hero {
-    margin-top: rem(90);
     .container {
       padding: rem(120) 0;
     }

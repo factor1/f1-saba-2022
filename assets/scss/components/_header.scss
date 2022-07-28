@@ -35,6 +35,7 @@ body {
   position: absolute;
   background-color: $primary;
   z-index: 9999;
+  display: none;
 
   &.fixed {
     position: fixed;
