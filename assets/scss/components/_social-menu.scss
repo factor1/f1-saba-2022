@@ -108,3 +108,10 @@
 .screen-reader-text {
   display: none;
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .menu-social {
+    padding: rem(20) 0;
+  }
+}

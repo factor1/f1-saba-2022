@@ -57,7 +57,7 @@ $content = get_field('footer_content', 'option');
   <div class="site-footer__bottom">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 sm-text-center">
 
           <p>©<?php echo date('Y'); ?> All right reserved.</p>
 

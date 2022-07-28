@@ -241,8 +241,20 @@ nav {
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .nav--footer {
+    padding: rem(20) 0;
     > ul > li {
       flex: 0 1 49%;
+    }
+  }
+
+  .site-footer__bottom  .menu > ul {
+    flex-direction: column;
+  }
+
+  .site-footer__bottom .col-12 {
+    flex-direction: column;
+    p {
+      padding-bottom: rem(20);
     }
   }
 }
