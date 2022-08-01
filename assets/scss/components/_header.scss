@@ -38,6 +38,7 @@ body {
   display: none;
 
   &.fixed {
+    display: inline;
     position: fixed;
     width: 100%;
   }

@@ -6,10 +6,12 @@
 // Site Header Custom Fields
 $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'logo');
 $header_toggle = get_field('menu_toggle');
+$header_ID = is_front_page() ? 'frontpage-menu' : 'site-menu';
+$header_class = is_front_page() ? ' ' : 'fixed';
 
 if(!$header_toggle): ?>
 
-  <header class="site-header" id="site-menu">
+  <header class="site-header <?php echo $header_class; ?>" id="<?php echo $header_ID; ?>">
     <div class="container">
       <div class="row">
         <div class="col-12">

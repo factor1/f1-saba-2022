@@ -7,6 +7,10 @@
 .centered-text-block {
   @include iPhoneX;
 
+  &.single-post .container {
+    padding-top: rem(140);
+  }
+
   .container {
     padding: rem(50) 0;
     iframe {

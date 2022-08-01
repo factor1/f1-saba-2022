@@ -155,24 +155,20 @@ $(document).ready(function() {
     ]
   });
 
-  let previousScroll = 0;
-  const $header = $("#site-menu");
-  const headerOrgOffset = $header.offset().top;
-
-  $(window).on("scroll", function() {
-    const currentScroll = $(this).scrollTop();
-    if(currentScroll > headerOrgOffset) {
-      if (currentScroll >= previousScroll) {
-        $header.slideUp("fast");
-      } else {
-        $header
+  var header = $("#frontpage-menu");
+  if (header) {
+    $(window).on("scroll", function() {
+      var currentScroll = $(this).scrollTop();
+      if (currentScroll > 100) {
+        header
           .slideDown("fast")
           .addClass("fixed");
+      } else {
+        header
+          .slideUp("fast")
+          .removeClass("fixed");
       }
-    } else {
-      $header.removeClass("fixed");   
-    }
-    previousScroll = currentScroll;
-  });
+    });
+  }
   
 });

@@ -9,7 +9,7 @@ get_header();
 
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-  <section class="centered-text-block">
+  <section class="centered-text-block single-post">
     <div class="container">
       <div class="row">
         <div class="col-10 col-centered">

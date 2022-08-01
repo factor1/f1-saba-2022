@@ -21,7 +21,7 @@ else :
   $bg_color = get_sub_field('centered_text_block_background_color');
 endif; ?>
 
-<section class="centered-text-block" style="background-color: <?php echo $bg_color; ?>">
+<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">
