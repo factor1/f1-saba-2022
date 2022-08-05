@@ -31,7 +31,7 @@ if( $query->have_posts() ) : ?>
             $citation = get_field('citation');
             $alt = get_post_meta($image, '_wp_attachment_image_alt', true);?>
 
-            <div class="col-4 sm-col-12">
+            <div class="col-4 md-col-6 sm-col-12">
               <div class="testimonial-grid__single">
                 <div class="single-top">
                   <div>

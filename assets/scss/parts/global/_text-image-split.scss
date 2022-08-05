@@ -102,7 +102,7 @@
 }
 
 // Media Queries
-@media screen and (max-width: $small-breakpoint) {
+@media screen and (max-width: $medium-breakpoint) {
   .text-image-split {
     &__text {
       max-width: 100%;
