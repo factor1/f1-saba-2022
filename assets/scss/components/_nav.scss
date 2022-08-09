@@ -26,7 +26,6 @@ nav {
 
 // Primary nav
 .nav--primary {
-  width: 100%;
   a {
     padding: rem(10);
     font: 400 rem(16)/1.19 $mont;
@@ -201,6 +200,7 @@ nav {
   a {
     font: 400 rem(16)/1.19 $mont;
     color: $primary;
+    text-align: left;
     // text-transform: uppercase;
 
     &:hover {

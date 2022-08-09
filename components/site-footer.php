@@ -13,13 +13,13 @@ $content = get_field('footer_content', 'option');
     <div class="container">
       <div class="row">
 
-        <div class="col-3 sm-col-12">
+        <div class="col-4 sm-col-12 sm-mid">
           <h6>FOLLOW US ON SOCIAL</h6>
           <?php // Social menu
             prelude_social_menu(); ?>
         </div>
 
-        <div class="col-6 sm-col-12">
+        <div class="col-4 sm-col-12">
           <?php // Logo ?>
           <div class="site-footer__logo">
             <a href="<?php echo esc_url(home_url()); ?>">
@@ -28,7 +28,7 @@ $content = get_field('footer_content', 'option');
           </div>
         </div>
         
-        <div class="col-3 sm-col-12 sm-text-center">
+        <div class="col-4 sm-col-12">
           <?php echo $content; ?>
           <?php wp_nav_menu(
             array(
