@@ -19,13 +19,18 @@
 
   &__logo {
     width: rem(250);
+    margin: 0 auto;
   }
 
   &__main {
     @include iPhoneX;
 
     .container {
-      padding: rem(30) 0 rem(60);
+      padding: rem(30) 0;
+
+      h6 {
+        font-weight: 600;
+      }
     }
 
     .footer-form {

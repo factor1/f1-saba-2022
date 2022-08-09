@@ -26,6 +26,7 @@ nav {
 
 // Primary nav
 .nav--primary {
+  width: 100%;
   a {
     padding: rem(10);
     font: 400 rem(16)/1.19 $mont;
@@ -35,6 +36,11 @@ nav {
     &:hover {
       color: $gold-light;
     }
+  }
+
+  ul {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .nav-button {
@@ -195,10 +201,10 @@ nav {
   a {
     font: 400 rem(16)/1.19 $mont;
     color: $primary;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
     &:hover {
-      color: $gray;
+      color: $gray-light;
     }
   }
 
@@ -222,7 +228,7 @@ nav {
     font: 400 rem(16)/1.19 $mont;
     color: $off-gray;
     margin-right: rem(30);
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
     &:hover {
       color: $gray-light;
