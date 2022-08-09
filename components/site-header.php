@@ -17,9 +17,9 @@ if(!$header_toggle): ?>
         <div class="col-12">
 
           <?php // Logo ?>
-          <!-- <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
+          <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
             <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>">
-          </a> -->
+          </a>
 
           <?php // Primary menu
           if( has_nav_menu('primary') ) : 
