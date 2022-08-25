@@ -81,9 +81,9 @@
   .text-media-split {
     &__text {
       max-width: 100%;
-      padding: rem(10) rem(30) !important;
+      padding: 0 !important;
       > div {
-        padding: 0;
+        padding: rem(10) rem(30) !important;
       }
     }
 
