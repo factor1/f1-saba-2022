@@ -20,6 +20,8 @@ $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
 $video_external = get_sub_field('text_image_split_video_external');
 $video_source = get_sub_field('text_image_split_video_source_select');
+$steps_toggle = get_sub_field('text_image_split_steps_toggle');
+$steps_content = get_sub_field('text_image_split_after_steps_content');
 
 // Conditional classes
 $sectionClass = $marginOption ? ' with-margin' : '';
@@ -45,6 +47,28 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
         <div>
 
           <?php echo $content;
+
+          if($steps_toggle && have_rows('text_image_split_steps_section')): ?>
+
+            <div class="text-image-split__steps">
+            <?php while( have_rows('text_image_split_steps_section') ): the_row(); 
+              $title = get_sub_field('title');
+              $sub_title = get_sub_field('sub_title');
+              ?>
+              <div class="single-steps">
+                <div class="steps-numbers">
+                  <span><?php echo get_row_index(); ?></span>
+                </div>
+                <div class="steps-content">
+                  <h3><?php echo $title; ?></h3>
+                  <h5><?php echo $sub_title; ?></h5>
+                </div>
+              </div>
+            <?php endwhile; ?>
+            </div>
+            
+            <?php echo $steps_content; ?>
+          <?php endif; 
 
           // Optional button
           if( $btnToggle && $btn ) : ?>
