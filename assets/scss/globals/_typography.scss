@@ -11,7 +11,6 @@ h1 {
 h2 {
   margin: 0 0 rem(20);
   font: 300 rem(35)/1.38 $rubik;
-  text-transform: uppercase;
   color: $primary;
 }
 
@@ -30,7 +29,6 @@ h4 {
 h5 {
   margin: 0 0 rem(20);
   font: 300 rem(20)/1.77 $mont;
-  text-transform: uppercase;
   color: $primary;
 }
 
@@ -45,7 +43,7 @@ p,
 ol,
 ul {
   margin: 0 0 rem(15);
-  font: 300 rem(16)/1.38 $mont;
+  font: 300 rem(17)/1.38 $mont;
   color: $primary;
 }
 

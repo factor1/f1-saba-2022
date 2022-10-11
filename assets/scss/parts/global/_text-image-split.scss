@@ -19,16 +19,15 @@
     .text-image-split__text {
       padding-top: rem(110);
       padding-bottom: rem(110);
-      padding-right: rem(120);
-      padding-left: rem(170);
+      padding-right: rem(60);
+      padding-left: rem(85);
     }
 
     .row--reverse .text-image-split__text {
-      padding-right: rem(120);
-      padding-left: rem(170);
+      padding-right: rem(60);
+      padding-left: rem(85);
     }
   }
-
 
   .container {
     padding: 0;
