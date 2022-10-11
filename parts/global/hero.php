@@ -17,9 +17,10 @@ $content = get_field('hero_content');
 $btnAlign = get_field('hero_button_alignment'); // left, center, or right
 $top_content = get_field('hero_top_content');
 $has_top_content = $top_content != '' ? ' has-top-content' : '';
+$hero_height = get_field('hero_height') !='' ? get_field('hero_height') : '400';
 ?>
 
-<section class="hero <?php echo $has_top_content; ?>" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
+<section class="hero <?php echo $has_top_content; ?>" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat; padding-top: <?php echo $hero_height; ?>px;">
 
   <?php // Optional bg video
   if( $videoToggle && $video ) : ?>
