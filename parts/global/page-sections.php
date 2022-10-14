@@ -55,6 +55,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/staff-grid');
 
+  elseif( get_row_layout() == 'text_video_split' ) :
+
+    get_template_part('parts/global/text-video-split');
+
   endif;
 
 endwhile; endif; ?>

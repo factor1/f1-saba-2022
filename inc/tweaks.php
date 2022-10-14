@@ -356,6 +356,9 @@
         jQuery(function($) {
             $('.acf-flexible-content .layout').addClass('-collapsed');
             $('#acf-flexible-content-collapse').detach();
+
+          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ jQuery(this).append('<h1>'+jQuery(this)[0].value+'</h1>') });
+          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ console.log(jQuery(this)[0].value); });
         });
     </script>
     <?php
