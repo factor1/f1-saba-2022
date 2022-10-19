@@ -28,7 +28,7 @@ nav {
 .nav--primary {
   a {
     padding: rem(10);
-    font: 400 rem(16)/1.19 $mont;
+    font: 400 rem(16)/1.19 $din;
     color: $secondary;
     text-transform: uppercase;
 
@@ -162,7 +162,7 @@ nav {
 
   a {
     padding: rem(10);
-    font: 400 rem(16)/1.19 $mont;
+    font: 400 rem(16)/1.19 $din;
     color: $white;
     text-align: center;
     text-transform: uppercase;
@@ -233,7 +233,7 @@ nav {
   }
 
   a {
-    font: 400 rem(16)/1.19 $mont;
+    font: 400 rem(16)/1.19 $din;
     color: $primary;
     text-align: left;
     // text-transform: uppercase;
@@ -260,7 +260,7 @@ nav {
 .site-footer__bottom {
 
   nav > ul > li > a {
-    font: 400 rem(16)/1.19 $mont;
+    font: 400 rem(16)/1.19 $din;
     color: $off-gray;
     margin-right: rem(30);
     // text-transform: uppercase;
