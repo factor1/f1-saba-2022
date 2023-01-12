@@ -20,4 +20,6 @@ if( function_exists('prelude_features') ){
   add_image_size( 'hero', 1920, 670, true );
   add_image_size( 'banner', 1920, 545, true );
   add_image_size( 'text_image_split', 950, 500, true );
+  add_image_size( 'testimonial_grid', 250, 250, true );
+  add_image_size( 'blog_hero', 900, 400, true );
 }

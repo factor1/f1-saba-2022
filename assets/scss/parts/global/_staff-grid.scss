@@ -1,0 +1,69 @@
+/*
+ * Staff Grid (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.staff-grid {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+
+  .col {
+    padding: rem(5) rem(5) rem(50);
+  }
+
+  &__name {
+    font-size: rem(24);
+    font-family: $din;
+    margin-bottom: rem(20);
+    text-transform: uppercase;
+    color: $gray;
+    letter-spacing: rem(2);
+  }
+
+  &__img {
+    min-height: rem(380);
+    width: 100%;
+    margin-bottom: rem(30);
+    border-radius: rem(15);
+  }
+
+  p {
+    font-family: $din;
+    font-size: rem(18);
+    color: $gray;
+  }
+
+  .block-grid-3 {
+    justify-content: center;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .staff-grid {
+    .container {
+      padding: rem(50) 0;
+    }
+
+    &__img {
+      min-height: rem(180);
+    }
+
+    &__name {
+      font-size: rem(16);
+      padding: 0 rem(20);
+    }
+
+    p {
+      font-size: rem(15);
+    }
+
+    .col {
+      padding: rem(5) rem(5) rem(30);
+    }
+  }
+}

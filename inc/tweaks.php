@@ -196,14 +196,23 @@
     $custom_colors = '
         "020000", "Black",
         "FFFFFF", "White",
+        "F7F7F7", "Off White",
+        "1A1A1A", "Off Black",
+        "e3a912", "Gold",
+        "E2C16E", "Light Gold",
+        "4D4D4D", "Gray",
+        "d1d1d1", "Light Gray",
+        "757576", "Off Gray"
     ';
+
+
 
     // build colour grid default+custom colors
     $init['textcolor_map'] = '['.$custom_colors.']';
 
     // change the number of rows in the grid if the number of colors changes
     // 8 swatches per row
-    $init['textcolor_rows'] = 1;
+    $init['textcolor_rows'] = 2;
 
     return $init;
   }
@@ -242,7 +251,7 @@
         position: relative;
         font: 400 17px/1.41 "Raleway", sans-serif;
         color: #020000;
-        background-color: #314556;
+        background-color: #1A1A1A;
       }
       .login .message,
       .login #login_error {
@@ -257,7 +266,7 @@
       }
       #login form p,
       #login form label {
-        color: #314556 !important;
+        color: #1A1A1A !important;
       }
       .login p a:hover,
       .login .privacy-policy-link:hover {
@@ -324,7 +333,7 @@
       }
   	</style>';
   }
-  // add_action('login_head', 'custom_loginlogo');
+  add_action('login_head', 'custom_loginlogo');
 
   // Update login logo link
   function custom_loginlogo_url($url) {
@@ -347,6 +356,9 @@
         jQuery(function($) {
             $('.acf-flexible-content .layout').addClass('-collapsed');
             $('#acf-flexible-content-collapse').detach();
+
+          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ jQuery(this).append('<h1>'+jQuery(this)[0].value+'</h1>') });
+          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ console.log(jQuery(this)[0].value); });
         });
     </script>
     <?php

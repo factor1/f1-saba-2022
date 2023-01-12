@@ -8,6 +8,7 @@
         'primary' => 'Primary Menu',
         'mobile'  => 'Mobile Menu',
         'footer'  => 'Footer Menu',
+        'footer_bottom'  => 'Bottom Footer Menu',
         'social'  => 'Social Menu',
       )
     );
@@ -23,7 +24,7 @@
           'container_id'   => 'menu-social', 'container_class' => 'menu-social',
           'menu_id'        => 'menu-social-items', 'menu_class' => 'menu-items',
           'depth'          => 1,
-          'link_before'    => '<span class="screen-reader-text">',
+          'link_before'    => '<span>',
           'link_after'     => '</span>', 'fallback_cb' => '',
         )
       );

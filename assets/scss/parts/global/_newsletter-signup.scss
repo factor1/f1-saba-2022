@@ -33,7 +33,7 @@
 
       .gform_footer {
         position: absolute;
-        bottom: rem(10);
+        bottom: rem(20);
         right: 0;
         width: auto !important;
         margin: 0 !important;
@@ -43,11 +43,12 @@
       input[type="submit"] {
         margin: 0 !important;
         min-width: rem(150);
-        // height: rem(62);
-        padding-top: rem(15);
-        padding-bottom: rem(15);
+        padding-top: rem(14);
+        padding-bottom: rem(14);
         border-top-right-radius: rem(17) !important;
         border-bottom-right-radius: rem(17) !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
       }
     }
 

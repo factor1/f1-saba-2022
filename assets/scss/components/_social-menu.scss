@@ -12,12 +12,16 @@
     li{
       display: inline-block;
       position: relative;
-      padding: 0 .625rem;
+      padding: 0 0 .625rem;
+      width: 50%;
       a{
-        display: inline-block;
+        display: flex;
         text-align: center;
-        display: inline-block;
-        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        color: $primary;
+        font: 400 rem(16)/1.19 $din;
+        // text-transform: uppercase;
         &:before{
           display: inline-block;
           font-style: normal;
@@ -26,12 +30,16 @@
           -webkit-font-smoothing: antialiased;
           font-family: 'Font Awesome 5 Brands';
           font-weight: 400;
-          font-size: rem(24);
-          // color: $white;
+          font-size: rem(16);
+          color: $primary;
           transition: all .4s ease;
+          margin-right: rem(10);
         }
-        &:hover:before {
-          // color: $lightGray;
+        &:hover {
+          color: $gray-light;
+          &:before {
+            color: $gray-light;
+          }
         }
       } // end anchor
       // Adding the icons
@@ -99,4 +107,11 @@
 // Hide the default Screen Reader text
 .screen-reader-text {
   display: none;
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .menu-social {
+    padding: rem(20) 0;
+  }
 }

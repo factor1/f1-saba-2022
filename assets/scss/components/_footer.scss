@@ -4,7 +4,6 @@
 .site-footer {
   &__top {
     @include iPhoneX;
-    // background-color: $red;
 
     .container {
       padding: rem(30) 0;
@@ -13,22 +12,81 @@
     .col-12 {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
   }
 
   &__logo {
     width: rem(250);
+    margin: 0 auto;
   }
 
   &__main {
     @include iPhoneX;
-    // background-color: $black;
 
     .container {
-      padding: rem(85) 0;
+      padding: rem(30) 0;
+
+      h6 {
+        font-weight: 600;
+      }
     }
+
+    .footer-form {
+      .gfield {
+        margin: 0 !important;
+      }
+      .gform_fields {
+        display: flex !important;
+        background-color: #09132110;
+        justify-content: space-between;
+      }
+
+      input[type=email] {
+        border: none !important;
+        padding: rem(15) 0 rem(15) rem(15) !important; 
+        font-size: rem(18);
+      }
+
+      .gform-button {
+        background: transparent !important;
+        border: none !important;
+        display: block;
+      }
+
+
+      #field_submit {
+        padding: rem(15) !important;
+        max-width: rem(60) !important;
+      }
+            
+
+    }
+
+  }
+
+  &__bottom {
+    @include iPhoneX;
+    background-color: $primary;
+
+    .container {
+      padding: rem(29) 0;
+    }
+
+    .col-12 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      color: $off-gray;
+      font: 400 rem(16)/1.19 $din;
+      margin: 0;
+    }
+
   }
 }
 
@@ -44,13 +102,17 @@
 
       a {
         display: block;
-        width: rem(100);
+        width: rem(280);
         margin: 0 auto rem(15);
       }
     }
 
     &__main .container {
       padding: rem(40) 0;
+    }
+
+    .sm-mid {
+      order: 1;
     }
   }
 }

@@ -7,8 +7,16 @@
 .centered-text-block {
   @include iPhoneX;
 
+  &.single-post .container {
+    padding-top: rem(140);
+  }
+
   .container {
     padding: rem(50) 0;
+    iframe {
+      width: 100%;
+      height: rem(600);
+    }
   }
 
   &__featured-image {
@@ -19,4 +27,13 @@
   .buttons {
     margin-top: rem(30);
   }
+
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .centered-text-block .container iframe {
+    height: rem(200);
+  }
+}
+

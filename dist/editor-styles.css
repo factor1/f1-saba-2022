@@ -4,3 +4,95 @@
 *[style*="color: #ffffff;"] {
   color: #a1abb2 !important;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+h1 {
+	margin: 0 0 20px;
+	font: 300 45px/1.23 "Rubik", sans-serif;
+	color: #4D4D4D;
+}
+
+h2 {
+	margin: 0 0 20px;
+	font: 300 35px/1.38 "Rubik", sans-serif;
+	text-transform: uppercase;
+	color: #1A1A1A;
+}
+
+h3 {
+	margin: 0 0 20px;
+	font: 300 30px/1.38 "Montserrat", sans-serif;
+	color: #D4B053;
+}
+
+h4 {
+	margin: 0 0 20px;
+	font: 300 25px/1.37 "Montserrat", sans-serif;
+	color: #1A1A1A;
+}
+
+h5 {
+	margin: 0 0 20px;
+	font: 300 20px/1.77 "Montserrat", sans-serif;
+	text-transform: uppercase;
+	color: #1A1A1A;
+}
+
+h6 {
+	margin: 0 0 20px;
+	font: 300 16px/1.38 "Montserrat", sans-serif;
+	color: #1A1A1A;
+}
+
+p,
+ol,
+ul {
+	margin: 0 0 15px;
+	font: 300 16px/1.38 "Montserrat", sans-serif;
+	color: #1A1A1A;
+}
+
+a {
+	font: inherit;
+	color: #D4B053;
+	text-decoration: underline;
+	transition: all .4s ease;
+}
+
+a:focus, a:hover {
+	color: #E2C16E;
+}
+
+.factor1 {
+	font-weight: 700;
+	font-family: 'Helvetica', sans-serif;
+	letter-spacing: -.1em;
+	color: inherit;
+	text-decoration: none;
+}
+
+.factor1:hover {
+	color: #D4B053;
+}
+
+@media screen and (max-width: 47.9375em) {
+	h1 {
+		font-size: 30.4px;
+	}
+
+	h2 {
+		font-size: 27.2px;
+	}
+
+	h3 {
+		font-size: 22.4px;
+	}
+
+	h4,
+  h5,
+  h6 {
+		font-size: 19.2px;
+	}
+}

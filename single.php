@@ -9,7 +9,7 @@ get_header();
 
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-  <section class="centered-text-block">
+  <section class="centered-text-block single-post">
     <div class="container">
       <div class="row">
         <div class="col-10 col-centered">
@@ -17,7 +17,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
           <?php // Featured image
           if( has_post_thumbnail() ) : ?>
 
-            <img src="<?php echo featuredURL('banner'); ?>" class="centered-text-block__featured-image" alt="<?php the_title(); ?> featured image">
+            <img src="<?php echo featuredURL('blog_hero'); ?>" class="centered-text-block__featured-image" alt="<?php the_title(); ?> featured image">
 
           <?php endif; ?>
 

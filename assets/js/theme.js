@@ -1,6 +1,7 @@
 import Bowser from "bowser";
 import $ from "jquery";
 import "slick-carousel";
+import MicroModal from "micromodal";
 
 $(document).ready(function() {
   // Inside of this function, $() will work as an alias for jQuery()
@@ -114,4 +115,60 @@ $(document).ready(function() {
       ]
     });
   }
+
+  // Micromodal init
+  MicroModal.init({
+    onClose: () => {
+      $("video").trigger("pause");
+      stopVideo;
+    }
+  });
+
+  var stopVideo = function () {
+    var videos = $("iframe");
+    videos.each(function (index) {
+      var iframe = videos[index];
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    });
+  };
+
+  // Home testimonials slider
+  $(".card_slider__slider").slick({
+    arrows: true,
+    autoplay: false,
+    dots: true,
+    initialSlide: 0,
+    slidesToShow: 1.5,
+    autoplaySpeed: 4000,
+    infinite: false,
+    centerMode: true,
+    variableWidth: false,
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  var header = $("#frontpage-menu");
+  if (header) {
+    $(window).on("scroll", function() {
+      var currentScroll = $(this).scrollTop();
+      if (currentScroll > 100) {
+        header
+          .slideDown("fast")
+          .addClass("fixed");
+      } else {
+        header
+          .slideUp("fast")
+          .removeClass("fixed");
+      }
+    });
+  }
+  
 });

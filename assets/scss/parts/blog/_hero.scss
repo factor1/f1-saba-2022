@@ -6,9 +6,8 @@
 
 .index--hero {
   @include iPhoneX;
-  // border-top: rem(2) solid $offWhite;
 
   .container {
-    padding: rem(40) 0;
+    padding: rem(160) 0 rem(50);
   }
 }

@@ -30,13 +30,21 @@ body {
 }
 
 .site-header {
-  position: relative;
   @include iPhoneX;
-  // background-color: $blue;
-  z-index: 999999;
+  width: 100%;
+  position: absolute;
+  background-color: $primary;
+  z-index: 9999;
+  display: none;
+
+  &.fixed {
+    display: inline;
+    position: fixed;
+    width: 100%;
+  }
 
   .container {
-    padding: rem(20) 0 rem(10);
+    padding: rem(20) 0;
   }
 
   .col-12 {

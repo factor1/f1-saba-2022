@@ -65,3 +65,7 @@ img{
   width: calc(100% + 10px);
   margin-left: rem(-5);
 }
+
+iframe {
+  max-width: 100%;
+}

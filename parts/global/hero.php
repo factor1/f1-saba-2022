@@ -14,9 +14,13 @@ $colAlign = get_field('hero_column_alignment');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
 $content = get_field('hero_content');
-$btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
+$btnAlign = get_field('hero_button_alignment'); // left, center, or right
+$top_content = get_field('hero_top_content');
+$has_top_content = $top_content != '' ? ' has-top-content' : '';
+$hero_height = get_field('hero_height') !='' ? get_field('hero_height') : '400';
+?>
 
-<section class="hero" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
+<section class="hero <?php echo $has_top_content; ?>" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat; padding-top: <?php echo $hero_height; ?>px;">
 
   <?php // Optional bg video
   if( $videoToggle && $video ) : ?>
@@ -29,29 +33,47 @@ $btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
 
   <?php endif; ?>
 
+  <?php if($top_content): ?>
+    <div class="herp__top-content">
+      <div class="container">
+        <div class="row row--justify-content-<?php echo $colAlign; ?>">
+          <div class="col-<?php echo $colSpan; ?>" data-aos="fade-up">
+            <?php echo $top_content; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
   <div class="container">
     <div class="row row--justify-content-<?php echo $colAlign; ?>">
       <div class="col-<?php echo $colSpan; ?>" data-aos="fade-up">
 
-        <?php echo $content;
+        <?php if($content != ''): ?>
+          <div class="hero__container">
 
-        // Optional buttons
-        if( have_rows('hero_buttons') ) : ?>
+            <?php echo $content;
 
-          <div class="buttons text-<?php echo $btnAlign; ?>">
+            // Optional buttons
+            if( have_rows('hero_buttons') ) : ?>
 
-            <?php while( have_rows('hero_buttons') ) : the_row();
-              $btnClass = get_sub_field('button_class');
-              $btn = get_sub_field('button'); ?>
+              <div class="buttons text-<?php echo $btnAlign; ?>">
 
-              <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-                <?php echo $btn['title']; ?>
-              </a>
+                <?php while( have_rows('hero_buttons') ) : the_row();
+                  $btnClass = get_sub_field('button_class');
+                  $btn = get_sub_field('button'); ?>
 
-            <?php endwhile; ?>
+                  <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
+                    <?php echo $btn['title']; ?>
+                  </a>
 
+                <?php endwhile; ?>
+
+              </div>
+
+            <?php endif; ?>
+            
           </div>
-
         <?php endif; ?>
 
       </div>

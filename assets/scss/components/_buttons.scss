@@ -3,26 +3,30 @@
 ------------------------------------------------------------------------------*/
 .button {
   &--primary {
-    // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
+    @include buttons($secondary, $secondary, $primary, $secondary, transparent, $secondary);
   }
 
   &--primary-ghost {
-    // @include buttons($primary, transparent, $primary, $primary, $primary, $white);
+    @include buttons($secondary, transparent, $secondary, $secondary, $secondary, $white);
   }
 
   &--secondary {
-    // @include buttons($secondary, $secondary, $white, $secondary, transparent, $secondary);
+    @include buttons($primary, $primary, $secondary, $primary, transparent, $primary);
   }
 
   &--secondary-ghost {
-    // @include buttons($secondary, transparent, $secondary, $secondary, $secondary, $white);
+    @include buttons($primary, transparent, $primary, $primary, $primary, $white);
   }
 
   &--white {
-    // @include buttons($white, $white, $primary, $white, transparent, $white);
+    @include buttons($white, $white, $primary, $white, transparent, $white);
   }
 
   &--white-ghost {
-    // @include buttons($white, transparent, $white, $white, $white, $primary);
+    @include buttons($white, transparent, $white, $white, $white, $primary);
+  }
+
+  &--gray {
+    @include buttons($gray-light, $gray-light, $primary, $gray-light, transparent, $gray-light);
   }
 }

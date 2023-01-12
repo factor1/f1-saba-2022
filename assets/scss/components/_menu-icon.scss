@@ -34,7 +34,7 @@
     display: block;
     width: rem(30);
     height: rem(3);
-    // background-color: $white;
+    background-color: $secondary;
     transform-origin: -4% center;
     transition: all .4s ease;
   }
@@ -45,7 +45,7 @@
     span,
     span:before,
     span:after {
-      // background-color: $coral;
+      background-color: $gold-light;
     }
   }
 

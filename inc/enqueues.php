@@ -19,6 +19,12 @@ if (!(is_admin() )) {
  */
 function prelude_theme_scripts() {
   // Fonts
+  wp_enqueue_style('google-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap', array(), THEME_VERSION );
+
+  wp_enqueue_style('google-rubik', 'https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap', array(), THEME_VERSION );
+
+  wp_enqueue_style('adobe-din', 'https://use.typekit.net/far1ttl.css', array(), THEME_VERSION );
+
   // Update font awesome with your kit script!!
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/de235ca0c9.js', array(), THEME_VERSION, true);
 

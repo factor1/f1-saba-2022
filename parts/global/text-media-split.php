@@ -1,16 +1,16 @@
 <?php
 /*
- * Text/Image Split (Global)
+ * Text/Media Split (Global)
  *
  * Template part used on various templates/views
  */
 
-// Text/Image Split Custom Fields
+// Text/Media Split Custom Fields
 $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left or right
 $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width section
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
 $bgColor = get_sub_field('text_image_split_background_color');
-$img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'large');
+$img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'text_image_split');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btnAlign = get_sub_field('text_image_split_button_alignment');
@@ -18,32 +18,32 @@ $btnClass = get_sub_field('text_image_split_button_class');
 $btn = get_sub_field('text_image_split_button');
 $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
+$video_external = get_sub_field('text_image_split_video_external');
+$video_source = get_sub_field('text_image_split_video_source_select');
 $steps_toggle = get_sub_field('text_image_split_steps_toggle');
 $steps_content = get_sub_field('text_image_split_after_steps_content');
-
 
 // Conditional classes
 $sectionClass = $marginOption ? ' with-margin' : '';
 $rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
-<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
+<section class="text-media-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
   <div class="container">
     <div class="row row--justify-content-end<?php echo $rowClass . $rowClass2; ?>">
 
       <?php $row_id = wp_unique_id(); ?>
       <?php if($video_toggle): ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat"   data-micromodal-trigger="modal-<?php echo $row_id; ?>">
-      <?php else: ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat">
-      <?php endif; ?>
-        <?php if($video_toggle): ?>
+        <div class="col-5 stretch text-media-split__image" data-micromodal-trigger="modal-<?php echo $row_id; ?>">
           <i class="fa fa-solid fa-play float-icon"></i>
-        <?php endif; ?>
+      <?php else: ?>
+        <div class="col-5 stretch text-media-split__image">
+      <?php endif; ?>
+        <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
       </div>
 
       <?php // Text ?>
-      <div class="col-6 text-image-split__text">
+      <div class="col-7 text-media-split__text">
         <div>
 
           <?php echo $content;
@@ -73,7 +73,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
           // Optional button
           if( $btnToggle && $btn ) : ?>
 
-            <div class="text-<?php echo $btnAlign; ?> sm-text-center">
+            <div class="text-<?php echo $btnAlign; ?>">
               <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
                 <?php echo $btn['title']; ?>
               </a>
@@ -99,10 +99,19 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
           <div class="container">
             <div class="row">
               <div class="col-12">
+
+              <?php if($video_source=='internal'): ?>
                 <video controls>
                   <source src="<?php echo $video['url']; ?>" type="<?php echo $video['mime_type']; ?>">
                   Your browser does not support the video tag.
                 </video>
+
+              <?php else: ?>
+                
+                <?php echo $video_external; ?>
+
+              <?php endif; ?>
+
               </div>
             </div>
           </div>

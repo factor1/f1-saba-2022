@@ -2,15 +2,95 @@
   Typography
 ------------------------------------------------------------------------------*/
 // Headings
+h1 {
+  margin: 0 0 rem(20);
+  font: 300 rem(45)/1.23 $din;
+  color: $gray;
+}
+
+h2 {
+  margin: 0 0 rem(20);
+  font: 300 rem(35)/1.38 $din;
+  color: $primary;
+}
+
+h3 {
+  margin: 0 0 rem(20);
+  font: 300 rem(30)/1.38 $din;
+  color: $secondary;
+}
+
+h4 {
+  margin: 0 0 rem(20);
+  font: 300 rem(25)/1.37 $din;
+  color: $primary;
+}
+
+h5 {
+  margin: 0 0 rem(20);
+  font: 300 rem(20)/1.77 $din;
+  color: $primary;
+}
+
+h6 {
+  margin: 0 0 rem(20);
+  font: 300 rem(16)/1.38 $din;
+  color: $primary;
+}
 
 // Body copy
-p, ol, ul {
+p,
+ol,
+ul {
   margin: 0 0 rem(15);
+  font: 300 rem(17)/1.38 $din;
+  color: $primary;
 }
 
 // Links
 a {
-  text-decoration: none;
+  font: inherit;
+  color: $secondary;
+  text-decoration: underline;
+  transition: all .4s ease;
+
+  &:focus,
+  &:hover {
+    color: $gold-light;
+  }
 }
 
 // Typography classes
+.factor1 {
+  font-weight: 700;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: -.1em;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  h1 {
+    font-size: rem(30.4);
+  }
+
+  h2 {
+    font-size: rem(27.2);
+  }
+
+  h3 {
+    font-size: rem(22.4);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: rem(19.2);
+  }
+
+}

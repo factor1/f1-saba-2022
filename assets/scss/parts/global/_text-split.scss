@@ -1,0 +1,21 @@
+/*
+ * Text Split (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.text-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+}
+
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .text-split .col-6 {
+    padding: rem(10) rem(30);
+  }
+}

@@ -1,0 +1,71 @@
+/*
+ * Card Slider (global)
+ *
+ */
+
+.card_slider {
+  @include iPhoneX;
+  background-color: $primary;
+
+  .container {
+    padding: rem(100) 0;
+  }
+
+  &__slider {
+
+    .slick-list {
+      padding: 0 rem(10) !important;
+    }
+
+    .single-card {
+      display: flex;
+      margin-right: rem(50);
+      max-width: rem(900);
+      min-height: rem(430);
+      background-color: $white;
+
+      .card-image {
+        flex-basis: 60%;
+      }
+
+      .card-content {
+        flex-basis: 40%;
+        padding: rem(20);
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+
+  .card_slider {
+    .slick-next,
+    .slick-prev {
+      display: none !important;
+    }
+  }
+  .card_slider__slider {
+    .single-card {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 rem(15);
+
+      .card-image {
+        flex-basis: auto;
+        height: 30vh;
+      }
+    }
+  }
+
+  .text-media-split .row--reverse .text-media-split__text>div,
+  .text-media-split__text>div {
+    padding: rem(10) rem(30);
+  }
+  
+
+}

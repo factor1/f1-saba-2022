@@ -5,6 +5,7 @@
 nav {
   ul {
     display: flex;
+    align-items: baseline;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -27,22 +28,28 @@ nav {
 .nav--primary {
   a {
     padding: rem(10);
-    // font: 400 rem(16)/1.19 $raleway;
-    // color: $white;
+    font: 400 rem(16)/1.19 $din;
+    color: $secondary;
+    text-transform: uppercase;
 
     &:hover {
-      // color: $coral;
+      color: $gold-light;
     }
+  }
+
+  ul {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .nav-button {
     padding: 0;
 
     a {
-      // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
-      // padding: rem(6) rem(15);
-      // font-size: rem(16);
-      text-transform: none;
+      @include buttons($secondary, $secondary, $primary, $secondary, transparent, $secondary);
+      padding: rem(15) rem(20);
+      font-size: rem(16);
+      text-transform: uppercase;
     }
   }
 
@@ -56,20 +63,54 @@ nav {
       -webkit-font-smoothing: antialiased;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      // color: $white;
+      color: $secondary;
       margin-left: rem(5);
       transition: all .4s ease;
     }
 
     &:hover {
       > a:after {
-        // color: $coral;
+        color: $secondary;
       }
 
       .sub-menu {
         display: block;
       }
     }
+
+    .menu-item-has-children {
+      >a:after {
+        content: '\f0d7';
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 900;
+        color: $secondary;
+        margin-left: rem(5);
+        transition: all .4s ease;
+        transform: rotate(-90deg);
+      }
+
+      .sub-menu {
+        display: none;
+      }
+
+      &:hover {
+        >a:after {
+          color: $secondary;
+        }
+
+        .sub-menu {
+          display: block;
+          left: 100%;
+          top: 0;
+        }
+      }
+    }
+
   }
 
   .sub-menu {
@@ -81,12 +122,13 @@ nav {
     min-width: rem(200);
     width: 150%;
     padding: rem(15) 0;
-    // background-color: $blue;
+    background-color: $primary;
     z-index: 99;
 
     a {
       padding: rem(10) rem(12);
       text-align: left;
+      text-transform: unset;
     }
   }
 }
@@ -100,7 +142,7 @@ nav {
   width: 100%;
   height: 100vh;
   padding: rem(50) 0;
-  // background-color: $blue;
+  background-color: $primary;
   z-index: -1;
 
   > ul {
@@ -120,12 +162,13 @@ nav {
 
   a {
     padding: rem(10);
-    // font: 400 rem(16)/1.19 $raleway;
-    // color: $white;
+    font: 400 rem(16)/1.19 $din;
+    color: $white;
     text-align: center;
+    text-transform: uppercase;
 
     &:hover {
-      // color: $coral;
+      color: $secondary;
     }
   }
 
@@ -135,9 +178,9 @@ nav {
 
     a {
       width: auto;
-      // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
-      // padding: rem(6) rem(15);
-      // font-size: rem(16);
+      @include buttons($secondary, $secondary, $primary, $secondary, transparent, $secondary);
+      padding: rem(6) rem(15);
+      font-size: rem(16);
       text-transform: none;
     }
   }
@@ -156,12 +199,12 @@ nav {
         font-weight: 900;
         font-size: rem(14);
         margin-left: rem(5);
-        // color: $white;
+        color: $secondary;
         transition: all .4s ease;
       }
 
       &:hover:after {
-        // color: $coral;
+        color: $gold-light;
       }
 
       &.active:after {
@@ -186,15 +229,17 @@ nav {
   }
 
   > ul > li {
-    flex: 0 1 24%;
+    flex: 0 1 50%;
   }
 
   a {
-    // font: 400 rem(17)/1.76 $raleway;
-    // color: $white;
+    font: 400 rem(16)/1.19 $din;
+    color: $primary;
+    text-align: left;
+    // text-transform: uppercase;
 
     &:hover {
-      // color: $coral;
+      color: $gray-light;
     }
   }
 
@@ -209,13 +254,48 @@ nav {
 
     }
   }
+
+}
+
+.site-footer__bottom {
+
+  nav > ul > li > a {
+    font: 400 rem(16)/1.19 $din;
+    color: $off-gray;
+    margin-right: rem(30);
+    // text-transform: uppercase;
+
+    &:hover {
+      color: $gray-light;
+    }
+  }
+
+  .sub-menu {
+    flex-wrap: wrap;
+
+    li {
+      flex: 0 1 100%;
+    }
+  }
 }
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .nav--footer {
+    padding: rem(20) 0;
     > ul > li {
       flex: 0 1 49%;
+    }
+  }
+
+  .site-footer__bottom  .menu > ul {
+    flex-direction: column;
+  }
+
+  .site-footer__bottom .col-12 {
+    flex-direction: column;
+    p {
+      padding-bottom: rem(20);
     }
   }
 }
