@@ -7,6 +7,10 @@
 .centered-text-block {
   @include iPhoneX;
 
+  &:target {
+    scroll-margin-top: 100px;
+  }
+
   &.single-post .container {
     padding-top: rem(140);
   }

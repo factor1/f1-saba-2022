@@ -13,15 +13,17 @@ if( $is404 ) :
   $colSpan = 10;
   $content = get_field('404_content', 'option');
   $bg_color = '#fff';
+  $sectionID = '';
 else :
   $colSpan = get_sub_field('centered_text_block_column_span');
   $content = get_sub_field('centered_text_block_content');
   $btnAlign = get_sub_field('centered_text_block_button_alignment');
   $btnAlign = get_sub_field('centered_text_block_button_alignment');
   $bg_color = get_sub_field('centered_text_block_background_color');
+  $sectionID = get_sub_field('centered_text_block_id');
 endif; ?>
 
-<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>">
+<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>" id="<?php echo $sectionID; ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">
