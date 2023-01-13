@@ -170,5 +170,18 @@ $(document).ready(function() {
       }
     });
   }
+
+  // Accordions 
+  $(".accordion__heading").on("click", function () {
+    let icon = $(this).find("i");
+
+    if (icon.hasClass("fa-plus")) {
+      icon.removeClass("fa-plus").addClass("fa-minus");
+    } else {
+      icon.removeClass("fa-minus").addClass("fa-plus");
+    }
+
+    $(this).siblings(".accordion__body").slideToggle();
+  });
   
 });

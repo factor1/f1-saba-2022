@@ -59,6 +59,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/text-video-split');
 
+  elseif( get_row_layout() == 'accordion_section' ) :
+
+    get_template_part('parts/global/accordion-section');
+
   endif;
 
 endwhile; endif; ?>

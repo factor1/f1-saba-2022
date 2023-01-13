@@ -7,10 +7,11 @@
 
 // 3-Column Grid Custom Fields
 $intro = get_sub_field('3_column_grid_intro_content');
+$bg_color = get_sub_field('3_column_background_color');
 
 if( have_rows('3_column_grid') ) : ?>
 
-  <section class="three-column-grid">
+  <section class="three-column-grid" style="background-color: <?php echo $bg_color; ?>;">
     <div class="container">
       <div class="row row--justify-content-center">
         <div class="col-12">

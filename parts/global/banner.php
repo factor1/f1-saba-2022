@@ -7,6 +7,7 @@
 
 // Banner Custom Fields
 $bg = wp_get_attachment_image_src(get_sub_field('banner_background'), 'banner');
+$bg_color = get_sub_field('banner_background_color');
 $width = get_sub_field('banner_width_option'); // T/F full-width
 $padding = get_sub_field('banner_padding');
 $hAlign = get_sub_field('banner_horizontal_background_alignment');
@@ -19,7 +20,7 @@ $btnClass = get_sub_field('banner_button_class');
 $btn = get_sub_field('banner_button');
 
 // Conditional classes/styles
-$bgStyle = ' style="background: url(' . $bg[0] . ') ' . $hAlign . ' ' . $vAlign . '/cover no-repeat; padding: ' . $padding . 'px 0;"';
+$bgStyle = ' style="background: '.$bg_color.' url(' . $bg[0] . ') ' . $hAlign . ' ' . $vAlign . '/cover no-repeat; padding: ' . $padding . 'px 0;"';
 $sectionStyle = $width ? $bgStyle : '';
 $colStyle = $width ? '' : $bgStyle; ?>
 

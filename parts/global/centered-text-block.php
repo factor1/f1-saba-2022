@@ -23,7 +23,7 @@ else :
   $sectionID = get_sub_field('centered_text_block_id');
 endif; ?>
 
-<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>" id="<?php echo $sectionID; ?>">
+<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>;" id="<?php echo $sectionID; ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">

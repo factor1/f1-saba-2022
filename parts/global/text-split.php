@@ -7,9 +7,11 @@
 
 // Custom fields
 $left_content = get_sub_field('text_split_left_content');
-$right_content = get_sub_field('text_split_right_content'); ?>
+$right_content = get_sub_field('text_split_right_content');
+$bg_color = get_sub_field('text_split_background_color');
+?>
 
-<section class="text-split">
+<section class="text-split" style="background-color: <?php echo $bg_color; ?>;">
   <div class="container">
     <div class="row">
       <div class="col-6">

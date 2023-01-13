@@ -35,3 +35,20 @@ function prelude_theme_scripts() {
   wp_enqueue_script('prelude-js', get_template_directory_uri() . '/dist/theme.js', array('jquery'), THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'prelude_theme_scripts' );
+
+/**
+ * Fonts for the WYSIWYG
+ */
+
+function prelude_load_custom_fonts($init) {
+
+  $stylesheet_url = 'https://use.typekit.net/far1ttl.css';
+
+  if(empty($init['content_css'])) {
+    $init['content_css'] = $stylesheet_url;
+  } else {
+    $init['content_css'] = $init['content_css'].','.$stylesheet_url;
+  }
+  return $init;
+}
+add_filter('tiny_mce_before_init', 'prelude_load_custom_fonts');
