@@ -63,6 +63,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/accordion-section');
 
+  elseif( get_row_layout() == 'full_width_slider' ) :
+
+    get_template_part('parts/global/full-width-slider');
+
   endif;
 
 endwhile; endif; ?>

@@ -183,5 +183,18 @@ $(document).ready(function() {
 
     $(this).siblings(".accordion__body").slideToggle();
   });
+
+  // Full-Width Slider
+  if ($(".full-width-slider").length) {
+    $(".full-width-slider").slick({
+      arrows: true,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+
+  }
   
 });
