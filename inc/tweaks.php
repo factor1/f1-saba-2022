@@ -199,7 +199,6 @@
         "F7F7F7", "Off White",
         "1A1A1A", "Off Black",
         "D4B053", "Gold",
-        "E2C16E", "Light Gold",
         "4D4D4D", "Gray",
         "d1d1d1", "Light Gray",
         "757576", "Off Gray"
