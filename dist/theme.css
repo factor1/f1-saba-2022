@@ -3067,6 +3067,9 @@ body.masked:after {
     scroll-margin-top: 100px; }
   .centered-text-block.single-post .container {
     padding-top: 8.75rem; }
+  .centered-text-block.has-margin {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem; }
   .centered-text-block .container {
     padding: 3.125rem 0; }
     .centered-text-block .container iframe {
@@ -3565,6 +3568,18 @@ body.masked:after {
       height: 100%; }
       .full-width-slider .slick-slide > div > .full-width-slider__slide > .single-slide {
         height: 100%; }
+
+.full-width-slider .slick-dotted.slick-slider {
+  margin-bottom: 2.5rem; }
+
+.full-width-slider .slick-prev {
+  left: 0; }
+
+.full-width-slider .slick-next {
+  right: 0; }
+
+.full-width-slider .slick-dots {
+  bottom: -1.875rem; }
 
 /*
  * Hero (Blog)

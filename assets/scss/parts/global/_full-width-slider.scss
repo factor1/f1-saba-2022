@@ -74,4 +74,20 @@
       }
     }
   }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: rem(40);
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-dots {
+    bottom: rem(-30);
+  }
 }

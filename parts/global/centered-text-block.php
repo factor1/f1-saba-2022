@@ -14,6 +14,7 @@ if( $is404 ) :
   $content = get_field('404_content', 'option');
   $bg_color = '#fff';
   $sectionID = '';
+  $hasMargin = false;
 else :
   $colSpan = get_sub_field('centered_text_block_column_span');
   $content = get_sub_field('centered_text_block_content');
@@ -21,9 +22,11 @@ else :
   $btnAlign = get_sub_field('centered_text_block_button_alignment');
   $bg_color = get_sub_field('centered_text_block_background_color');
   $sectionID = get_sub_field('centered_text_block_id');
+  $hasMargin = get_sub_field('centered_text_block_margin_option');
+  $hasMarginClass = $hasMargin ? ' has-margin' : '';
 endif; ?>
 
-<section class="centered-text-block <?php echo $isSingleClass; ?>" style="background-color: <?php echo $bg_color; ?>;" id="<?php echo $sectionID; ?>">
+<section class="centered-text-block <?php echo $hasMarginClass; ?>" style="background-color: <?php echo $bg_color; ?>;" id="<?php echo $sectionID; ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">
