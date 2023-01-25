@@ -221,9 +221,9 @@
   function custom_wysiwyg_options( $init_array ) {
     $style_formats = array(
       array(
-        'title' => 'Callout (White)',
-  			'block' => 'h2',
-        'classes' => 'callout--white',
+        'title' => 'Good Karma',
+  			'block' => 'span',
+        'classes' => 'karma-regular',
   			'wrapper' => false,
       ),
     );

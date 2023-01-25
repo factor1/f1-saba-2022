@@ -77,6 +77,14 @@ a {
   }
 }
 
+.karma-regular {
+  font-family: $karma;
+}
+
+.karma-bold {
+  font-family: $karma-bold;
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   h1 {

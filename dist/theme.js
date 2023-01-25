@@ -14598,13 +14598,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   (0, _jquery.default)(".accordion__heading").on("click", function () {
     var icon = (0, _jquery.default)(this).find("i");
-
-    if (icon.hasClass("fa-plus")) {
-      icon.removeClass("fa-plus").addClass("fa-minus");
-    } else {
-      icon.removeClass("fa-minus").addClass("fa-plus");
-    }
-
+    icon.toggleClass("active");
     (0, _jquery.default)(this).siblings(".accordion__body").slideToggle();
   }); // Full-Width Slider
 

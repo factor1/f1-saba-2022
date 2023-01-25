@@ -21,7 +21,10 @@
       border: none;
       background-color: transparent;
       text-align: left;
-      clear: both;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
 
       h3 {
         margin: 0 0 rem(15);
@@ -32,6 +35,10 @@
       i {
         float: right;
         transition: all .4s ease;
+
+        &.active {
+          transform: rotate(180deg);
+        }
       }
 
       &:focus,
@@ -46,10 +53,7 @@
 
     &__body {
       display: none;
-    }
-
-    +.accordion {
-      border-top: rem(2) solid $primary;
+      padding: 0 rem(6);
     }
   }
 

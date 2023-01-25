@@ -2005,6 +2005,12 @@ a {
   .factor1:hover {
     color: #D4B053; }
 
+.karma-regular {
+  font-family: "good-karma-smooth-regular", sans-serif; }
+
+.karma-bold {
+  font-family: "good-karma-smooth-upright", sans-serif; }
+
 @media screen and (max-width: 47.9375em) {
   h1 {
     font-size: 1.9rem; }
@@ -3499,7 +3505,10 @@ body.masked:after {
       border: none;
       background-color: transparent;
       text-align: left;
-      clear: both; }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer; }
       .accordion-section .accordion__heading h3 {
         margin: 0 0 0.9375rem;
         transition: all .4s ease;
@@ -3507,14 +3516,15 @@ body.masked:after {
       .accordion-section .accordion__heading i {
         float: right;
         transition: all .4s ease; }
+        .accordion-section .accordion__heading i.active {
+          transform: rotate(180deg); }
       .accordion-section .accordion__heading:focus h3,
       .accordion-section .accordion__heading:focus i, .accordion-section .accordion__heading:hover h3,
       .accordion-section .accordion__heading:hover i {
         color: #1A1A1A; }
     .accordion-section .accordion__body {
-      display: none; }
-    .accordion-section .accordion + .accordion {
-      border-top: 0.125rem solid #1A1A1A; }
+      display: none;
+      padding: 0 0.375rem; }
   .accordion-section .buttons {
     margin-top: 1.875rem; }
 
