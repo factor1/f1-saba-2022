@@ -1,0 +1,12 @@
+/*
+ * Gallery categories template
+ *
+ */
+
+.gallery-categories {
+  @include iPhoneX; 
+
+  .container {
+    padding: rem(140) 0 rem(50) ;
+  }
+}
