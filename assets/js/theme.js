@@ -173,7 +173,7 @@ $(document).ready(function() {
 
   // Accordions 
   $(".accordion__heading").on("click", function () {
-    let icon = $(this).find("i");
+    let icon = $(this).find(".faq-title");
     icon.toggleClass("active");
 
     $(this).siblings(".accordion__body").slideToggle();

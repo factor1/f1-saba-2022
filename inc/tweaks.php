@@ -226,6 +226,12 @@
         'classes' => 'karma-regular',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'FAQ Title',
+  			'block' => 'span',
+        'classes' => 'faq-title',
+  			'wrapper' => false,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;

@@ -27,7 +27,7 @@ if( have_rows($section . 'accordions') ) : ?>
 
             <div class="accordion">
               <button class="accordion__heading" tab-index="0">
-                <div><?php echo $headline; ?></div><h3><i class="fas fa-chevron-down"></i></h3>
+                <div><?php echo $headline; ?></div>
               </button>
 
               <div class="accordion__body">

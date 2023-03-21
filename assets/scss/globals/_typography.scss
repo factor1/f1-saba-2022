@@ -85,6 +85,24 @@ a {
   font-family: $karma-bold;
 }
 
+.faq-title {
+  display: flex;
+  justify-content: space-between;
+  &:after {
+    display: inline-block;
+    position: relative;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f078';
+    font-weight: 500;
+    margin-left: rem(20);
+    transition: all .4s ease;
+  }
+
+  &.active:after {
+    transform: rotate(180deg);
+  }
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   h1 {
