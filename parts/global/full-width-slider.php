@@ -5,10 +5,12 @@
  * Template part used on various templates/views
  *
  */
+
+ $slider_class = get_sub_field('flex_full_slider_height') ? ' tall-slide' : '';
 ?>
 
 <?php if( have_rows('full_width_slider') ): ?>
-  <section class="full-width-slider">
+  <section class="full-width-slider <?php echo $slider_class; ?>">
   <?php while( have_rows('full_width_slider') ): the_row(); 
     $heightToggle = get_sub_field('full_width_slide_height_toggle');
     $bg = wp_get_attachment_image_src(get_sub_field('full_width_slide_background'), 'hero');

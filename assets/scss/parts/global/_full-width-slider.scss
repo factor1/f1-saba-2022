@@ -54,6 +54,12 @@
     }
   }
 
+  &.tall-slide {
+    .single-slide .container {
+      padding: 25% 0;
+    }
+  }
+
 
   .slick-track {
     display: flex !important;
