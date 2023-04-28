@@ -12,6 +12,7 @@ $marginOption = get_sub_field('text_image_split_margin_option'); // margin above
 $bgColor = get_sub_field('text_image_split_background_color');
 $img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'large');
 $content = get_sub_field('text_image_split_content');
+$anchor = get_sub_field('anchor_name');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btnAlign = get_sub_field('text_image_split_button_alignment');
 $btnClass = get_sub_field('text_image_split_button_class');
@@ -27,7 +28,7 @@ $sectionClass = $marginOption ? ' with-margin' : '';
 $rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
-<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
+<section id="<?php echo $anchor; ?>" class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
   <div class="container">
     <div class="row row--justify-content-end<?php echo $rowClass . $rowClass2; ?>">
 
