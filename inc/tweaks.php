@@ -389,3 +389,18 @@
 
   // Remove theme/plugin editors from admin
   define( 'DISALLOW_FILE_EDIT', true );
+
+
+  function f1_depth_menu_class( $classes, $args, $depth ) {
+    if ( 0 == $depth ) {
+      $classes[] = 'sub-first';
+    }
+    if ( 1 == $depth ) {
+      $classes[] = 'sub-second';
+    }
+    if ( 2 == $depth ) {
+      $classes[] = 'sub-third';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_submenu_css_class', 'f1_depth_menu_class', 10, 3 );

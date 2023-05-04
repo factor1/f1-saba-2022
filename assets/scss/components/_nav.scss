@@ -73,42 +73,14 @@ nav {
         color: $secondary;
       }
 
-      .sub-menu {
+      >.sub-menu {
         display: block;
       }
     }
 
-    .menu-item-has-children {
-      >a:after {
-        content: '\f0d7';
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Font Awesome 5 Pro';
-        font-weight: 900;
-        color: $secondary;
-        margin-left: rem(5);
-        transition: all .4s ease;
-        transform: rotate(-90deg);
-      }
-
-      .sub-menu {
-        display: none;
-      }
-
-      &:hover {
-        >a:after {
-          color: $secondary;
-        }
-
-        .sub-menu {
-          display: block;
-          left: 100%;
-          top: 0;
-        }
-      }
+    .sub-second, .sub-third {
+      left: 100%;
+      top: 0;
     }
 
   }
