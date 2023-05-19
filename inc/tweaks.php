@@ -362,8 +362,13 @@
             $('.acf-flexible-content .layout').addClass('-collapsed');
             $('#acf-flexible-content-collapse').detach();
 
-          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ jQuery(this).append('<h1>'+jQuery(this)[0].value+'</h1>') });
-          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ console.log(jQuery(this)[0].value); });
+            // Add background color "swatches"
+            if($("div[data-name$='background_color'],div[data-name*='background_color']")) {
+              $("div[data-name$='background_color'],div[data-name*='background_color']").find("input[type=radio]").each(function(){
+                var color = $(this).val();
+                $(this).closest('label').prepend('<div style="background-color:'+color+';" class="background-preview"></div>');
+              });
+            };
         });
     </script>
     <?php
@@ -404,3 +409,4 @@
     return $classes;
 }
 add_filter( 'nav_menu_submenu_css_class', 'f1_depth_menu_class', 10, 3 );
+

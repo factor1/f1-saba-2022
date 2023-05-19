@@ -12,7 +12,7 @@
   }
 
   .accordion {
-    padding: rem(30) 0 rem(15);
+    padding: rem(5) 0;
 
     &__heading {
       position: relative;
@@ -28,6 +28,10 @@
 
       div {
         width: 100%;
+      }
+
+      p {
+        margin: 0;
       }
 
       h3 {

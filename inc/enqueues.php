@@ -52,3 +52,12 @@ function prelude_load_custom_fonts($init) {
   return $init;
 }
 add_filter('tiny_mce_before_init', 'prelude_load_custom_fonts');
+
+
+/**
+ * Enqueue admin styles
+ */
+function prelude_admin_style() {
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/dist/admin-styles.css');
+}
+add_action('admin_enqueue_scripts', 'prelude_admin_style');

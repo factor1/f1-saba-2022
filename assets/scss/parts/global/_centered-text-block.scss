@@ -20,6 +20,48 @@
     margin-bottom: rem(30);
   }
 
+  &__steps {
+    padding: rem(40) 0;
+
+    .single-steps {
+      display: flex;
+      margin-bottom: rem(30);
+
+      .steps-numbers {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(20) rem(35);
+        background: #4d4d4d;
+        border-radius: 50%;
+        font-size: rem(45);
+        font-family: $din;
+        margin-right: rem(25);
+        height: rem(70);
+
+        span {
+          position: absolute;
+        }
+      }
+
+      .steps-content {
+        h3 {
+          font-weight: bold;
+          color: $gray;
+        }
+
+        h5 {
+          color: $primary;
+        }
+
+        * {
+          margin: 0;
+        }
+      }
+    }
+  }
+
   .container {
     padding: rem(50) 0;
     iframe {

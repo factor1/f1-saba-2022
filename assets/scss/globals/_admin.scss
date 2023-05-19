@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+  Editor Styles
+------------------------------------------------------------------------------*/
+
+// Background color swatch previews
+.acf-field-radio[data-name*="background_color"] {
+  ul.acf-radio-list label {
+    display: flex;
+    align-items: center;
+    height: rem(30);
+  }
+}
+
+.background-preview {
+  height: rem(20);
+  width: rem(30);
+  display: inline-block;
+  border-radius: rem(5);
+  border: solid rem(1) #8d9195;
+  overflow: hidden;
+  margin-right: rem(5);
+}
