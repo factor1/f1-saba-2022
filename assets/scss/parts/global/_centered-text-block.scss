@@ -33,15 +33,16 @@
         align-items: center;
         justify-content: center;
         padding: rem(10) rem(20);
-        background: $secondary;
+        background: #4d4d4d;
         border-radius: 50%;
         font-size: rem(20);
         font-family: $din;
         margin-right: rem(25);
-        height: rem(50);
+        height: rem(40);
 
         span {
           position: absolute;
+          color: $secondary;
         }
       }
 

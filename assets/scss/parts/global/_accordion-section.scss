@@ -26,6 +26,16 @@
       justify-content: space-between;
       cursor: pointer;
 
+      .heading-combo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        i {
+          margin-right: rem(15);
+        }
+      }
+
       div {
         width: 100%;
       }

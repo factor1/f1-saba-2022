@@ -177,6 +177,8 @@ $(document).ready(function() {
     icon.toggleClass("active");
 
     $(this).siblings(".accordion__body").slideToggle();
+    $(this).find(".open-icon").toggle();
+    $(this).find(".close-icon").toggle();
   });
 
   // Full-Width Slider
