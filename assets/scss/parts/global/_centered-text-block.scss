@@ -32,13 +32,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: rem(20) rem(35);
-        background: #4d4d4d;
+        padding: rem(10) rem(20);
+        background: $secondary;
         border-radius: 50%;
-        font-size: rem(45);
+        font-size: rem(20);
         font-family: $din;
         margin-right: rem(25);
-        height: rem(70);
+        height: rem(50);
 
         span {
           position: absolute;

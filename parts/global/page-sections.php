@@ -67,6 +67,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/full-width-slider');
 
+  elseif( get_row_layout() == 'service_galleries' ) :
+
+    get_template_part('parts/global/service-galleries');
+
   endif;
 
 endwhile; endif; ?>
