@@ -22,7 +22,7 @@ $bg_color = get_sub_field('card_slider_background_color');?>
 
           <?php if( have_rows('cards_slides') ): ?>
               <?php while( have_rows('cards_slides') ): the_row(); 
-                $img = wp_get_attachment_image_src(get_sub_field('image'), 'medium');
+                $img = wp_get_attachment_image_src(get_sub_field('image'), 'large');
                 $content = get_sub_field('content');
                 $link = get_sub_field('link') ?>
                 <div>

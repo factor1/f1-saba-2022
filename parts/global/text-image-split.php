@@ -20,6 +20,7 @@ $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
 $steps_toggle = get_sub_field('text_image_split_steps_toggle');
 $steps_content = get_sub_field('text_image_split_after_steps_content');
+$row_custom_id = get_sub_field('anchor_name');
 
 
 // Conditional classes
@@ -27,7 +28,7 @@ $sectionClass = $marginOption ? ' with-margin' : '';
 $rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
-<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
+<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;" id="<?php echo slugify($row_custom_id); ?>">
   <div class="container">
     <div class="row row--justify-content-end<?php echo $rowClass . $rowClass2; ?>">
 

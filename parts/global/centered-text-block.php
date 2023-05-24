@@ -30,7 +30,7 @@ else :
   $steps_content = get_sub_field('centered_text_block_after_steps_content');
 endif; ?>
 
-<section class="centered-text-block <?php echo $hasMarginClass; ?>" style="background-color: <?php echo $bg_color; ?>;" id="<?php echo $sectionID; ?>">
+<section class="centered-text-block <?php echo $hasMarginClass; ?>" style="background-color: <?php echo $bg_color; ?>;" id="<?php echo slugify($sectionID); ?>">
   <div class="container">
     <div class="row">
       <div class="col-<?php echo $colSpan; ?> col-centered">
