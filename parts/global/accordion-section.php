@@ -11,10 +11,11 @@ $colSpan = get_sub_field($section . 'column_span'); // 6 - 12
 $bg = get_sub_field($section . 'background');
 $intro = get_sub_field($section . 'intro');
 $btnAlign = get_sub_field($section . 'button_alignment'); 
+$sectionID = get_sub_field($section . 'id'); 
 
 if( have_rows($section . 'accordions') ) : ?>
 
-  <section class="accordion-section" style="background-color: <?php echo $bg; ?>">
+  <section class="accordion-section" style="background-color: <?php echo $bg; ?>" id="<?php echo slugify($sectionID); ?>">
     <div class="container">
       <div class="row row--justify-content-center">
         <div class="col-<?php echo $colSpan; ?>">

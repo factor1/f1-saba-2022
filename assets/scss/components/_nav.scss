@@ -197,7 +197,8 @@ nav {
 // Footer nav
 .nav--footer {
   ul {
-    flex-wrap: wrap;
+    display: block;
+    column-count: 2;
   }
 
   > ul > li {
