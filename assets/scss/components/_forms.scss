@@ -2,7 +2,7 @@
   Forms
 ------------------------------------------------------------------------------*/
 // General Form Styles
-label {
+label, .gfield_label, .gfield_description {
   position: relative;
   left: rem(20);
   padding-right: rem(30) !important;
