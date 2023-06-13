@@ -163,7 +163,7 @@ $(document).ready(function() {
     autoplay: false,
     dots: true,
     initialSlide: 0,
-    slidesToShow: 1.5,
+    slidesToShow: 1,
     autoplaySpeed: 4000,
     infinite: false,
     centerMode: true,

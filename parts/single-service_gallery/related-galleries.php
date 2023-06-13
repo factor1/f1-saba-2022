@@ -29,7 +29,7 @@ if( $query ) : ?>
 
       <div class="row">
         <div class="col-12 text-center">
-          <h3>View other Cases</h3>
+          <h3>View Other Cases</h3>
         </div>
       </div>
 
