@@ -71,6 +71,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/service-galleries');
 
+  elseif( get_row_layout() == 'service_galleries_category' ) :
+
+    get_template_part('parts/global/service-galleries-category');
+
   endif;
 
 endwhile; endif; ?>
