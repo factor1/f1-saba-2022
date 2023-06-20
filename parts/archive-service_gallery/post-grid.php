@@ -9,6 +9,11 @@
   <div class="container">
     <div class="row row--justify-content-center">
 
+      <div class="col-12 text-center">
+        <h3>Gallery</h3>
+        <h2><?php echo str_replace("Service Category: ", "", get_the_archive_title()); ?></h2>
+      </div>
+
       <?php if( have_posts() ) :
 
         while( have_posts() ) : the_post();
