@@ -6,6 +6,10 @@
     @include buttons($secondary, $secondary, $primary, $secondary, transparent, $secondary);
   }
 
+  &--primary-alt {
+    @include buttons($secondary, $secondary, $white, $secondary, transparent, $secondary);
+  }
+
   &--primary-ghost {
     @include buttons($secondary, transparent, $secondary, $secondary, $secondary, $white);
   }

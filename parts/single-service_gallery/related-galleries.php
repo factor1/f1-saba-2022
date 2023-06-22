@@ -63,8 +63,8 @@ if( $query ) : ?>
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="text-left">
-          <a href="<?php echo get_term_link($current_cat[0]->term_taxonomy_id,$current_cat[0]->taxonomy); ?>" class="button button--secondary" role="link" title="Go back" target="">Go Back to Main Gallery</a>
+        <div class="text-center">
+          <a href="<?php echo get_term_link($current_cat[0]->term_taxonomy_id,$current_cat[0]->taxonomy); ?>" class="button button--primary-alt" role="link" title="Go back" target="">Go Back to Main Gallery</a>
         </div>
       </div>
     </div>

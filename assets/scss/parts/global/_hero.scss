@@ -75,10 +75,10 @@
 }
 
 // Hide video on mobile devices
-.touch .hero__video,
-.touch .hero__video video {
-  display: none;
-}
+// .touch .hero__video,
+// .touch .hero__video video {
+//   display: none;
+// }
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {

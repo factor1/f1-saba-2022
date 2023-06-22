@@ -68,6 +68,11 @@
       .gform_footer {
         bottom: rem(20);
       }
+
+      input[type=submit] {
+        line-height: 1 !important;
+        padding-top: rem(12);
+      }
     }
 
     &.gform_validation_error form .gform_footer {
