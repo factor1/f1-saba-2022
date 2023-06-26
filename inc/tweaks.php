@@ -416,3 +416,13 @@ function slugify($str, $delimiter = '-'){
   return $slug;
 }
 
+//srcset helper
+function f1_acf_responsive_image($image_id, $image_size, $max_width){
+	if($image_id != '') {
+
+		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
+		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+    var_dump($image_srcset);
+		return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+	}
+}
