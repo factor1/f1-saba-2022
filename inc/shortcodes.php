@@ -9,3 +9,15 @@ function name_shortcode( $atts = array(), $content = null ) {
   return $first_name;
 }
 add_shortcode('name', 'name_shortcode');
+
+
+function testimonial_shortcode( $atts = array() ) {
+  $a = shortcode_atts( array(
+    'id' => 1
+  ), $atts );
+
+  $output = get_field('testimonial', $a['id']);
+
+  return $output;
+}
+add_shortcode('testimonial', 'testimonial_shortcode');

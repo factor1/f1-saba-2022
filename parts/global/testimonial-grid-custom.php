@@ -7,9 +7,11 @@
 
 $intro = get_sub_field('testimonial_grid_custom_intro');
 // $btn = get_sub_field('testimonial_button');
-$featured_posts = get_sub_field('testimonials_grid_custom'); ?>
+$featured_posts = get_sub_field('testimonials_grid_custom');
+$bg_color = get_sub_field('testimonials_background_color');
+?>
 
-<section class="testimonial-grid">
+<section class="testimonial-grid" style="background-color: <?php echo $bg_color; ?>;">
   <div class="container">
     <div class="row">
       <div class="col-10 col-centered testimonial-grid__intro">

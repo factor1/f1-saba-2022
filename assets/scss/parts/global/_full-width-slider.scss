@@ -1,0 +1,99 @@
+/**
+ * Full width slider (Global)
+ *
+ * Template part used on various templates/views
+ *
+ */
+
+.full-width-slider {
+
+  &__slide {
+    .single-slide {
+      position: relative;
+      @include iPhoneX;
+  
+      &__bg,
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+  
+      &__overlay {
+        z-index: 10;
+        background: rgba($white, 0.5);
+        // background: linear-gradient(to right, rgba($white, 0.95) 50%, rgba($white, 0.04));
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0) 65%);
+  
+  
+        &.dark {
+          background: rgba($black, 0.5);
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 35%, rgba(255, 255, 255, 0) 65%);
+  
+          +.container *:not(.button) {
+            color: $white;
+          }
+        }
+  
+        &.reverse {
+          background: linear-gradient(to left, rgba($white, 0.95) 50%, rgba($white, 0.04));
+        }
+      }
+  
+      .container {
+        padding: 10% 0;
+        z-index: 20;
+      }
+    }
+  
+    // Short hero
+    .single-slide.short .container {
+      padding: rem(100) 0;
+    }
+  }
+
+  &.tall-slide {
+    .single-slide .container {
+      padding: 25% 0;
+    }
+  }
+
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+
+    >div {
+      height: 100%;
+
+      >.full-width-slider__slide {
+        height: 100%;
+
+        >.single-slide {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: rem(40);
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-dots {
+    bottom: rem(-30);
+  }
+}

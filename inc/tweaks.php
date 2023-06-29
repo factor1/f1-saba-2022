@@ -198,8 +198,7 @@
         "FFFFFF", "White",
         "F7F7F7", "Off White",
         "1A1A1A", "Off Black",
-        "e3a912", "Gold",
-        "E2C16E", "Light Gold",
+        "D4B053", "Gold",
         "4D4D4D", "Gray",
         "d1d1d1", "Light Gray",
         "757576", "Off Gray"
@@ -222,9 +221,15 @@
   function custom_wysiwyg_options( $init_array ) {
     $style_formats = array(
       array(
-        'title' => 'Callout (White)',
-  			'block' => 'h2',
-        'classes' => 'callout--white',
+        'title' => 'Good Karma',
+  			'block' => 'span',
+        'classes' => 'karma-regular',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'FAQ Title',
+  			'block' => 'span',
+        'classes' => 'faq-title',
   			'wrapper' => false,
       ),
     );
@@ -357,8 +362,13 @@
             $('.acf-flexible-content .layout').addClass('-collapsed');
             $('#acf-flexible-content-collapse').detach();
 
-          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ jQuery(this).append('<h1>'+jQuery(this)[0].value+'</h1>') });
-          //jQuery("div[data-name$='background_color']").find('.acf-radio-list li label input').each(function(){ console.log(jQuery(this)[0].value); });
+            // Add background color "swatches"
+            if($("div[data-name$='background_color'],div[data-name*='background_color']")) {
+              $("div[data-name$='background_color'],div[data-name*='background_color']").find("input[type=radio]").each(function(){
+                var color = $(this).val();
+                $(this).closest('label').prepend('<div style="background-color:'+color+';" class="background-preview"></div>');
+              });
+            };
         });
     </script>
     <?php
@@ -384,3 +394,39 @@
 
   // Remove theme/plugin editors from admin
   define( 'DISALLOW_FILE_EDIT', true );
+
+
+  function f1_depth_menu_class( $classes, $args, $depth ) {
+    if ( 0 == $depth ) {
+      $classes[] = 'sub-first';
+    }
+    if ( 1 == $depth ) {
+      $classes[] = 'sub-second';
+    }
+    if ( 2 == $depth ) {
+      $classes[] = 'sub-third';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_submenu_css_class', 'f1_depth_menu_class', 10, 3 );
+
+// Slugify strings
+function slugify($str, $delimiter = '-'){
+  $slug = strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
+  return $slug;
+}
+
+// set the max image width 
+function f1_acf_max_srcset_image_width() {
+	return 3000;
+}
+add_filter( 'max_srcset_image_width', 'f1_acf_max_srcset_image_width', 10 , 2 );
+
+//srcset helper
+function f1_acf_responsive_image($image_id, $image_size, $max_width){
+	if($image_id != '') {
+		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
+		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+		return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+	}
+}

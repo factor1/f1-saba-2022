@@ -21,9 +21,8 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
           <?php endif; ?>
 
-          <h1><?php the_title(); ?></h1>
-
           <?php // Meta data
+          echo '<h1>'.get_the_title().'</h1>';
           get_template_part('parts/meta');
 
           the_content(); ?>

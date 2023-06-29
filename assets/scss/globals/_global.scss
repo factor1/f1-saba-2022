@@ -28,6 +28,10 @@ body {
   min-height: 100%;
 }
 
+main {
+  min-height: calc(100vh - 236px);
+}
+
 // Hide empty paragraphs
 p:empty{
   display: none !important;

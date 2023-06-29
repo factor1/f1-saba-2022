@@ -26,7 +26,7 @@ $hero_height = get_field('hero_height') !='' ? get_field('hero_height') : '400';
   if( $videoToggle && $video ) : ?>
 
     <div class="hero__video">
-      <video autoplay loop muted>
+      <video autoplay loop muted playsinline>
         <source src="<?php echo $video; ?>" type="video/mp4">
       </video>
     </div>

@@ -7,6 +7,7 @@
 
 $intro = get_sub_field('testimonial_intro');
 $btn = get_sub_field('testimonial_button');
+$bg_color = get_sub_field('testimonial_background_color');
 $args = array(
 	'post_type' => array( 'simple_testimonials' ),
 );
@@ -14,7 +15,7 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ) : ?>
 
-  <section class="testimonial-grid">
+  <section class="testimonial-grid" style="background-color: <?php echo $bg_color; ?>;">
     <div class="container">
       <div class="row">
         <div class="col-10 col-centered testimonial-grid__intro">

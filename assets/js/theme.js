@@ -116,6 +116,30 @@ $(document).ready(function() {
     });
   }
 
+  // Slider section
+  if ($(".slider-section-related__slider").length ) {
+    $(".slider-section-related__slider").slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      slidesToShow: 6,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+      ]
+    });
+  }
+
   // Micromodal init
   MicroModal.init({
     onClose: () => {
@@ -139,7 +163,7 @@ $(document).ready(function() {
     autoplay: false,
     dots: true,
     initialSlide: 0,
-    slidesToShow: 1.5,
+    slidesToShow: 1,
     autoplaySpeed: 4000,
     infinite: false,
     centerMode: true,
@@ -169,6 +193,29 @@ $(document).ready(function() {
           .removeClass("fixed");
       }
     });
+  }
+
+  // Accordions 
+  $(".accordion__heading").on("click", function () {
+    let icon = $(this).find(".faq-title");
+    icon.toggleClass("active");
+
+    $(this).siblings(".accordion__body").slideToggle();
+    $(this).find(".open-icon").toggle();
+    $(this).find(".close-icon").toggle();
+  });
+
+  // Full-Width Slider
+  if ($(".full-width-slider").length) {
+    $(".full-width-slider").slick({
+      arrows: true,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+
   }
   
 });

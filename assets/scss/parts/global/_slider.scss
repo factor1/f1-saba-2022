@@ -30,8 +30,14 @@
     margin: 0 auto;
     padding: rem(30);
     border-radius: rem(5);
-    // background-color: $white;
-    // box-shadow: 0 0 rem(20) rgba($lightestGray, 0.3);
+  }
+
+  .slider-section-related__slide {
+    display: block !important;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 rem(10);
+    border-radius: rem(5);
   }
 
   .button {

@@ -10,7 +10,11 @@ $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left 
 $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width section
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
 $bgColor = get_sub_field('text_image_split_background_color');
-$img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'large');
+$image = get_sub_field('text_image_split_image');
+$img = wp_get_attachment_image_src($image, 'full');
+$alt = get_post_meta($image, '_wp_attachment_image_alt', true);
+$imgSrc = f1_acf_responsive_image($image, 'full', '1920px');
+$image_srcset = wp_get_attachment_image_srcset( $image, 'full' );
 $content = get_sub_field('text_image_split_content');
 $anchor = get_sub_field('anchor_name');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
@@ -21,6 +25,7 @@ $video_toggle = get_sub_field('text_image_split_video_toggle');
 $video = get_sub_field('text_image_split_video');
 $steps_toggle = get_sub_field('text_image_split_steps_toggle');
 $steps_content = get_sub_field('text_image_split_after_steps_content');
+$row_custom_id = get_sub_field('anchor_name');
 
 
 // Conditional classes
@@ -28,23 +33,24 @@ $sectionClass = $marginOption ? ' with-margin' : '';
 $rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
 $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
-<section id="<?php echo $anchor; ?>" class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;">
+<section class="text-image-split<?php echo $sectionClass; ?>" style="background-color: <?php echo $bgColor; ?>;" id="<?php echo slugify($row_custom_id); ?>">
   <div class="container">
     <div class="row row--justify-content-end<?php echo $rowClass . $rowClass2; ?>">
 
       <?php $row_id = wp_unique_id(); ?>
       <?php if($video_toggle): ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat"   data-micromodal-trigger="modal-<?php echo $row_id; ?>">
+        <div class="col-6 stretch text-image-split__image" data-micromodal-trigger="modal-<?php echo $row_id; ?>">
       <?php else: ?>
-        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') top/cover no-repeat">
+        <div class="col-6 stretch text-image-split__image">
       <?php endif; ?>
         <?php if($video_toggle): ?>
           <i class="fa fa-solid fa-play float-icon"></i>
         <?php endif; ?>
+        <img class="text-image-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>">
       </div>
 
       <?php // Text ?>
-      <div class="col-6 text-image-split__text">
+      <div class="col-6 stretch text-image-split__text">
         <div>
 
           <?php echo $content;

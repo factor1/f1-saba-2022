@@ -6,19 +6,19 @@
 
 .text-image-split {
   &.with-margin {
-    margin-top: rem(30);
-    margin-bottom: rem(30);
+    margin-top: rem(60);
+    margin-bottom: rem(60);
   }
 
   .row--reverse .text-image-split__text {
-    padding-right: rem(12.8);
-    padding-left: rem(30);
+    padding-right: rem(85);
+    padding-left: 0;
   }
 
   .row--full-width {
     .text-image-split__text {
-      padding-top: rem(110);
-      padding-bottom: rem(110);
+      padding-top: rem(40);
+      padding-bottom: rem(40);
       padding-right: rem(60);
       padding-left: rem(85);
     }
@@ -43,16 +43,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: rem(20) rem(35);
+        padding: rem(10) rem(20);
         background: #4d4d4d;
         border-radius: 50%;
-        font-size: rem(45);
+        font-size: rem(20);
         font-family: $din;
         margin-right: rem(25);
-        height: rem(70);
+        height: rem(40);
 
         span {
           position: absolute;
+          color: $secondary;
         }
       }
 
@@ -72,9 +73,10 @@
   }
 
   &__text {
-    padding-top: rem(110);
-    padding-bottom: rem(60);
-    padding-right: rem(110);
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    padding-right: 0;
+    padding-left: rem(85);
 
     >div {
       @include iPhoneX;
@@ -84,6 +86,10 @@
   &__image {
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     div {
       position: absolute;
@@ -123,7 +129,7 @@
 
     &__image {
       order: -1;
-      padding-bottom: 100%;
+      padding: 0;
     }
 
     .sm-text-center * {

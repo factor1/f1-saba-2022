@@ -7,10 +7,11 @@
 
 // Slider Custom Fields
 $intro = get_sub_field('slider_intro_content');
+$bg_color = get_sub_field('slider_background_color');
 
 if( have_rows('slider') ) : ?>
 
-  <section class="slider-section">
+  <section class="slider-section" style="background-color: <?php echo $bg_color; ?>;">
     <div class="container">
       <div class="row">
         <div class="col-12">

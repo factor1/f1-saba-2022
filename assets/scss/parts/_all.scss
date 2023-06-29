@@ -14,8 +14,16 @@
 @import 'global/newsletter-signup';
 @import 'global/testimonial-grid';
 @import 'global/staff-grid';
+@import 'global/accordion-section';
+@import 'global/full-width-slider';
 
 // Blog
 @import 'blog/hero';
 @import 'blog/filters';
 @import 'blog/post-list';
+
+// Archive Galleries
+@import 'archive-service_gallery/post-grid';
+
+//Gallery Archive Template
+@import 'gallery-categories/gallery-categories';

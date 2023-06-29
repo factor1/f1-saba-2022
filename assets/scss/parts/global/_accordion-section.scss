@@ -1,0 +1,94 @@
+/**
+ * Accordion Section
+ * 
+ * @author Factor1 Studios
+ */
+
+.accordion-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .accordion {
+    padding: rem(5) 0;
+
+    &__heading {
+      position: relative;
+      width: 100%;
+      -webkit-appearance: none;
+      border: none;
+      background-color: transparent;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .heading-combo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        i {
+          margin-right: rem(15);
+        }
+      }
+
+      div {
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      h3 {
+        margin: 0 0 rem(15);
+        transition: all .4s ease;
+        cursor: pointer;
+      }
+
+      i {
+        float: right;
+        transition: all .4s ease;
+
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:focus,
+      &:hover {
+
+        h3,
+        i {
+          color: $primary;
+        }
+      }
+    }
+
+    &__body {
+      display: none;
+      padding: 0 rem(6);
+    }
+  }
+
+  .buttons {
+    margin-top: rem(30);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .accordion-section {
+    .container {
+      padding: rem(30) 0 rem(40);
+    }
+
+    .accordion {
+      padding: rem(25) 0 rem(10);
+    }
+  }
+}

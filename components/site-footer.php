@@ -6,6 +6,7 @@
 // Site Footer Custom Fields
 $logo = wp_get_attachment_image_src(get_field('footer_logo', 'option'), 'logo');
 $content = get_field('footer_content', 'option');
+$address = get_field('footer_address', 'option');
 ?>
 
 <footer class="site-footer">
@@ -13,7 +14,7 @@ $content = get_field('footer_content', 'option');
     <div class="container">
       <div class="row">
 
-        <div class="col-4 sm-col-12 sm-mid">
+        <div class="col-4 sm-col-12 sm-mid text-right sm-text-left">
           <h6>FOLLOW US ON SOCIAL</h6>
           <?php // Social menu
             prelude_social_menu(); ?>
@@ -30,13 +31,20 @@ $content = get_field('footer_content', 'option');
         
         <div class="col-4 sm-col-12">
           <?php echo $content; ?>
-          <?php wp_nav_menu(
-            array(
-              'theme_location' => 'footer',
-              'container' => 'nav',
-              'container_class' => 'nav--footer'
-            )
-          ); ?>
+          <div class="row">
+            <div class="col-5 col-no-pad">
+              <?php wp_nav_menu(
+                array(
+                  'theme_location' => 'footer',
+                  'container' => 'nav',
+                  'container_class' => 'nav--footer'
+                )
+              ); ?>
+            </div>
+            <div class="col-7 col-no-pad">
+              <?php echo $address; ?>
+            </div>
+          </div>
         </div>
 
       </div>

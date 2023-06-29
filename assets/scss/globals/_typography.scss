@@ -2,6 +2,10 @@
   Typography
 ------------------------------------------------------------------------------*/
 // Headings
+strong {
+  font-weight: 700;
+}
+
 h1 {
   margin: 0 0 rem(20);
   font: 300 rem(45)/1.23 $din;
@@ -43,8 +47,12 @@ p,
 ol,
 ul {
   margin: 0 0 rem(15);
-  font: 300 rem(17)/1.38 $din;
+  font: 300 rem(20)/1.38 $din;
   color: $primary;
+
+  strong {
+    font-weight: 600;
+  }
 }
 
 // Links
@@ -70,6 +78,32 @@ a {
 
   &:hover {
     color: $secondary;
+  }
+}
+
+.karma-regular {
+  font-family: $karma;
+}
+
+.karma-bold {
+  font-family: $karma-bold;
+}
+
+.faq-title {
+  display: flex;
+  justify-content: space-between;
+  &:after {
+    display: inline-block;
+    position: relative;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f078';
+    font-weight: 500;
+    margin-left: rem(20);
+    transition: all .4s ease;
+  }
+
+  &.active:after {
+    transform: rotate(180deg);
   }
 }
 

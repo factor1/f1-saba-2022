@@ -6,8 +6,8 @@
 
 .text-media-split {
   &.with-margin {
-    margin-top: rem(30);
-    margin-bottom: rem(30);
+    margin-top: rem(60);
+    margin-bottom: rem(60);
   }
 
   .row--reverse .text-media-split__text {
@@ -15,7 +15,7 @@
     justify-content: flex-end;
 
     >div {
-      padding: rem(50) rem(40) rem(20) 0;
+      padding: rem(50) rem(40) rem(40) rem(40);
     }
   }
 
@@ -41,7 +41,7 @@
     >div {
       @include iPhoneX;
       max-width: rem(700);
-      padding: rem(50) rem(40) rem(20) rem(40);
+      padding: rem(50) rem(40) rem(40) rem(40);
       background-color: $white;
       z-index: 5;
     }
@@ -71,6 +71,10 @@
     }
   }
 
+  &__image-file {
+    display: none;
+  }
+
   .button {
     margin-top: rem(30);
   }
@@ -89,7 +93,14 @@
 
     &__image {
       order: -1;
-      padding-bottom: 50%;
+      padding: 0;
+      div {
+        background-image: none !important;
+      }
+    }
+
+    &__image-file {
+      display: block;
     }
 
     .sm-text-center * {

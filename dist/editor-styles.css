@@ -7,92 +7,107 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://use.typekit.net/far1ttl.css');
+
 
 h1 {
-	margin: 0 0 20px;
-	font: 300 45px/1.23 "Rubik", sans-serif;
-	color: #4D4D4D;
+	margin: 0 0 1.25rem;
+	font: 300 2.8125rem/1.23 din-2014, sans-serif;
+	color: #4d4d4d;
 }
 
 h2 {
-	margin: 0 0 20px;
-	font: 300 35px/1.38 "Rubik", sans-serif;
-	text-transform: uppercase;
-	color: #1A1A1A;
+	margin: 0 0 1.25rem;
+	font: 300 2.1875rem/1.38 din-2014, sans-serif;
+	color: #1a1a1a;
 }
 
 h3 {
-	margin: 0 0 20px;
-	font: 300 30px/1.38 "Montserrat", sans-serif;
-	color: #D4B053;
+	margin: 0 0 1.25rem;
+	font: 300 1.875rem/1.38 din-2014, sans-serif;
+	color: #d4b053;
 }
 
 h4 {
-	margin: 0 0 20px;
-	font: 300 25px/1.37 "Montserrat", sans-serif;
-	color: #1A1A1A;
+	margin: 0 0 1.25rem;
+	font: 300 1.5625rem/1.37 din-2014, sans-serif;
+	color: #1a1a1a;
 }
 
 h5 {
-	margin: 0 0 20px;
-	font: 300 20px/1.77 "Montserrat", sans-serif;
-	text-transform: uppercase;
-	color: #1A1A1A;
+	margin: 0 0 1.25rem;
+	font: 300 1.25rem/1.77 din-2014, sans-serif;
+	color: #1a1a1a;
 }
 
 h6 {
-	margin: 0 0 20px;
-	font: 300 16px/1.38 "Montserrat", sans-serif;
-	color: #1A1A1A;
+	margin: 0 0 1.25rem;
+	font: 300 1rem/1.38 din-2014, sans-serif;
+	color: #1a1a1a;
 }
 
 p,
 ol,
 ul {
-	margin: 0 0 15px;
-	font: 300 16px/1.38 "Montserrat", sans-serif;
-	color: #1A1A1A;
+	margin: 0 0 0.9375rem;
+	font: 300 1.25rem/1.38 din-2014, sans-serif;
+	color: #1a1a1a;
+}
+
+p strong,
+ol strong,
+ul strong {
+	font-weight: 600;
 }
 
 a {
 	font: inherit;
-	color: #D4B053;
+	color: #d4b053;
 	text-decoration: underline;
-	transition: all .4s ease;
+	transition: all 0.4s ease;
 }
 
-a:focus, a:hover {
-	color: #E2C16E;
+a:focus,
+a:hover {
+	color: #e2c16e;
 }
 
 .factor1 {
 	font-weight: 700;
 	font-family: 'Helvetica', sans-serif;
-	letter-spacing: -.1em;
+	letter-spacing: -0.1em;
 	color: inherit;
 	text-decoration: none;
 }
 
 .factor1:hover {
-	color: #D4B053;
+	color: #d4b053;
+}
+
+.karma-regular {
+	font-family: "good-karma-smooth-regular", sans-serif;
+}
+
+.karma-bold {
+	font-family: "good-karma-smooth-upright", sans-serif;
 }
 
 @media screen and (max-width: 47.9375em) {
 	h1 {
-		font-size: 30.4px;
+		font-size: 1.9rem;
 	}
 
 	h2 {
-		font-size: 27.2px;
+		font-size: 1.7rem;
 	}
 
 	h3 {
-		font-size: 22.4px;
+		font-size: 1.4rem;
 	}
 
 	h4,
-  h5,
-  h6 {
-		font-size: 19.2px;
+	h5,
+	h6 {
+		font-size: 1.2rem;
 	}
 }

@@ -7,9 +7,10 @@
  */
 
 $intro = get_sub_field('card_slider_intro');
-$full_btn = get_sub_field('card_slider_button');?>
+$full_btn = get_sub_field('card_slider_button');
+$bg_color = get_sub_field('card_slider_background_color');?>
 
-<section class="card_slider">
+<section class="card_slider" style="background-color: <?php echo $bg_color; ?>;">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -21,7 +22,7 @@ $full_btn = get_sub_field('card_slider_button');?>
 
           <?php if( have_rows('cards_slides') ): ?>
               <?php while( have_rows('cards_slides') ): the_row(); 
-                $img = wp_get_attachment_image_src(get_sub_field('image'), 'medium');
+                $img = wp_get_attachment_image_src(get_sub_field('image'), 'large');
                 $content = get_sub_field('content');
                 $link = get_sub_field('link') ?>
                 <div>
