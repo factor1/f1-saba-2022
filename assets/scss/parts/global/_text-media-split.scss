@@ -71,6 +71,10 @@
     }
   }
 
+  &__image-file {
+    display: none;
+  }
+
   .button {
     margin-top: rem(30);
   }
@@ -89,7 +93,14 @@
 
     &__image {
       order: -1;
-      padding-bottom: 100%;
+      padding: 0;
+      div {
+        background-image: none !important;
+      }
+    }
+
+    &__image-file {
+      display: block;
     }
 
     .sm-text-center * {
