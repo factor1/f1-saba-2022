@@ -38,9 +38,9 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
       <?php $row_id = wp_unique_id(); ?>
       <?php if($video_toggle): ?>
-        <div class="col-6 stretch text-image-split__image" data-micromodal-trigger="modal-<?php echo $row_id; ?>">
+        <div class="col-6 stretch text-image-split__image" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat" data-micromodal-trigger="modal-<?php echo $row_id; ?>">
       <?php else: ?>
-        <div class="col-6 stretch text-image-split__image">
+        <div class="col-6 stretch text-image-split__image"style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat" >
       <?php endif; ?>
         <?php if($video_toggle): ?>
           <i class="fa fa-solid fa-play float-icon"></i>
