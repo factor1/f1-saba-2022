@@ -15,7 +15,6 @@ $img = wp_get_attachment_image_src($image, 'full');
 $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
 $imgSrc = f1_acf_responsive_image($image, 'full', '1920px');
 $image_srcset = wp_get_attachment_image_srcset( $image, 'full' );
-var_dump($image_srcset);
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btnAlign = get_sub_field('text_image_split_button_alignment');
