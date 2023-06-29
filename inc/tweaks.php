@@ -416,3 +416,17 @@ function slugify($str, $delimiter = '-'){
   return $slug;
 }
 
+// set the max image width 
+function f1_acf_max_srcset_image_width() {
+	return 3000;
+}
+add_filter( 'max_srcset_image_width', 'f1_acf_max_srcset_image_width', 10 , 2 );
+
+//srcset helper
+function f1_acf_responsive_image($image_id, $image_size, $max_width){
+	if($image_id != '') {
+		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
+		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+		return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+	}
+}
