@@ -44,7 +44,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
         <div class="col-5 stretch text-media-split__image">
       <?php endif; ?>
         <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
-        <img class="text-media-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>">
+        <!-- <img class="text-media-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>"> -->
       </div>
 
       <?php // Text ?>

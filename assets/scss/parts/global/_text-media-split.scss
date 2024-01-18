@@ -57,7 +57,6 @@
       left: 0;
       width: 150%;
       height: 100%;
-      background-image: none !important;
     }
 
     .float-icon {
@@ -94,15 +93,16 @@
 
     &__image {
       order: -1;
-      padding: 0;
-      div {
-        background-image: none !important;
-      }
+      padding-bottom: 100%;
+      // padding: 0;
+      // div {
+      //   background-image: none !important;
+      // }
     }
 
-    &__image-file {
-      display: block;
-    }
+    // &__image-file {
+    //   display: block;
+    // }
 
     .sm-text-center * {
       text-align: center !important;

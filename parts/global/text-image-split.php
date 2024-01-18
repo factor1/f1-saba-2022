@@ -45,7 +45,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
         <?php if($video_toggle): ?>
           <i class="fa fa-solid fa-play float-icon"></i>
         <?php endif; ?>
-        <img class="text-image-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>">
+        <!-- <img class="text-image-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>"> -->
       </div>
 
       <?php // Text ?>
