@@ -11,7 +11,7 @@ $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
 $bgColor = get_sub_field('text_image_split_background_color');
 $image = get_sub_field('text_image_split_image');
-$img = wp_get_attachment_image_src($image, 'text_image_split');
+$img = wp_get_attachment_image_src($image, 'big_text_image_split');
 $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
 $imgSrc = f1_acf_responsive_image($image, 'full', '1920px');
 $image_srcset = wp_get_attachment_image_srcset( $image, 'full' );
@@ -44,7 +44,7 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
         <div class="col-5 stretch text-media-split__image">
       <?php endif; ?>
         <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
-        <img class="text-media-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>">
+        <!-- <img class="text-media-split__image-file" <?php echo $imgSrc; ?> alt="<?php echo $alt; ?>"> -->
       </div>
 
       <?php // Text ?>
