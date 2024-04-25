@@ -11,7 +11,7 @@ if (!(is_admin() )) {
     // return "$url' defer ";
     return "$url' defer onload='";
   }
-  add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+  // add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
 
 /**
@@ -26,7 +26,7 @@ function prelude_theme_scripts() {
   wp_enqueue_style('adobe-din', 'https://use.typekit.net/far1ttl.css', array(), THEME_VERSION );
 
   // Update font awesome with your kit script!!
-  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/de235ca0c9.js', array(), THEME_VERSION, true);
+  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/b5cac97d3e.js', array(), THEME_VERSION, true);
 
   // CSS
   wp_enqueue_style('prelude-css', get_template_directory_uri() . '/dist/theme.css', array(), THEME_VERSION );
